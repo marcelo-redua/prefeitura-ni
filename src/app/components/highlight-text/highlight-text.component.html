@@ -1,0 +1,13 @@
+<div class="flex items-center justify-between gap-4">
+  <!-- Texto à esquerda -->
+  <div class="text-left my-4">
+    <p class="text-lg font-semibold text-blue-dark uppercase">{{ topText }}</p>
+    <h1 class="text-4xl font-bold text-blue-dark uppercase">
+      {{ highlightText }}
+      <span class="block h-1 mt-1 w-28 rounded-sm bg-orange"></span>
+    </h1>
+  </div>
+
+  <!-- Condicional para exibir a imagem apenas se a variável "image" tiver valor -->
+  <img *ngIf="image" [src]="image" alt="Descrição da imagem" class="hidden md:block h-24 object-cover">
+</div>

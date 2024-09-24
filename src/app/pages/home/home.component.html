@@ -1,0 +1,64 @@
+<main>
+  <section>
+    <div class="container mx-auto px-4">
+      <app-highlight-text
+        [topText]="'como podemos'"
+        [highlightText]="'ajudar?'"
+        [image]="'/assets/image2.png'"
+      ></app-highlight-text>
+
+      <app-service-panel></app-service-panel>
+    </div>
+  </section>
+
+  <section>
+    <div class="container mx-auto pb-4 px-4">
+      <app-highlight-text
+        [topText]="'o que está rolando'"
+        [highlightText]="'por aqui!'"
+      >
+      </app-highlight-text>
+  
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="border-2 border-orange rounded-lg overflow-hidden">
+          <img src="/assets/banner1.png" alt="Banner 1" class="w-full h-auto" />
+        </div>
+        <div class="border-2 border-orange rounded-lg overflow-hidden">
+          <img src="/assets/banner2.png" alt="Banner 2" class="w-full h-auto" />
+        </div>
+        <div class="border-2 border-orange rounded-lg overflow-hidden">
+          <img src="/assets/banner3.png" alt="Banner 3" class="w-full h-auto" />
+        </div>
+        <div class="border-2 border-orange rounded-lg overflow-hidden">
+          <img src="/assets/banner4.png" alt="Banner 4" class="w-full h-auto" />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section class="bg-gradient-to-b from-white to-gray-light">
+    <div class="container mx-auto p-4">
+      <app-highlight-text
+        [topText]="'Últimas'"
+        [highlightText]="'notícias'"
+      ></app-highlight-text>
+
+      <div class="flex flex-col lg:flex-row gap-6 h-full">
+        <div class="lg:w-1/2 h-full">
+          <app-carousel class="h-full"></app-carousel>
+        </div>
+
+        <div class="lg:w-1/2 h-full">
+          <app-latest-news [news]="newsData" class="h-full"></app-latest-news>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-4">
+        <app-button surface="secondary" label="Mais Notícias"></app-button>
+      </div>
+      <app-mockup></app-mockup>
+    </div>
+  </section>
+</main>

@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    background-color: #f4f4f4;
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  color: gray !important; /* Força a cor das setas para cinza */
+  font-size: 24px; /* Ajuste o tamanho das setas, se necessário */
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  color: gray !important; /* Força a cor das setas para cinza */
+  font-size: 24px; /* Ajuste o tamanho das setas, se necessário */
+}
+
+/* Para as bolinhas de paginação */
+.swiper-pagination-bullet {
+  background-color: gray !important; /* Força a cor cinza nas bolinhas de paginação */
+  opacity: 1 !important; /* Garante que a cor não seja afetada pela transparência */
+}
+
+/* Para a bolinha ativa */
+.swiper-pagination-bullet-active {
+  background-color: red !important; /* Cor vermelha para a bolinha ativa */
+}

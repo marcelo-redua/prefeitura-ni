@@ -1,0 +1,22 @@
+/* Adapte conforme necessário ou use Tailwind CSS */
+.text-blue-dark {
+    color: #1a202c;
+  }
+  
+  .text-orange {
+    color: #f97316;
+  }
+  
+  .hover\:underline:hover {
+    text-decoration: underline;
+  }
+  
+  .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0.5rem;
+  }
+  
+  .mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  

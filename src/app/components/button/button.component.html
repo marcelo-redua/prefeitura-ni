@@ -1,0 +1,9 @@
+<button 
+  [ngClass]="getClass()"
+  class="btn"
+  [disabled]="disabled">
+  <ng-container *ngIf="icon">
+    <i [ngClass]="icon" class="btn-icon"></i>
+  </ng-container>
+  <span>{{ label }}</span>
+</button>

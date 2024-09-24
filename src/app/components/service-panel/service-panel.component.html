@@ -1,0 +1,29 @@
+<app-card>
+  <div class="flex flex-col gap-5 mb-7 sm:flex-row">
+    <div class="flex gap-4 border-b border-gray">
+      <h2 class="items-center font-medium text-blue-dark">Painel de Serviços</h2>
+    </div>
+  </div>
+  <ul class="grid grid-cols-2 gap-2 sm:grid-cols-4 xl:grid-cols-8">
+    <li *ngFor="let service of services" class="flex">
+      <a
+        [routerLink]="service.link"
+        class="flex flex-col items-center justify-center p-4 w-full h-full border border-gray rounded-xl cursor-pointer hover:border-orange transition-colors duration-200 group"
+      >
+        <div
+          class="mb-3 transform transition-transform duration-300 group-hover:-translate-y-1"
+        >
+          <img
+            [src]="service.icon"
+            [alt]="service.title"
+            width="25"
+            height="25"
+          />
+        </div>
+        <span class="text-sm font-semibold text-center text-blue-dark">
+          {{ service.title }}
+        </span>
+      </a>
+    </li>
+  </ul>
+</app-card>

@@ -1,0 +1,53 @@
+.btn {
+
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+  
+    &.btn-primary {
+      background-color: #E06939;
+      color: white;
+      border-radius: 1000px;
+      border: none;
+  
+      &:hover {
+        background-color: #bebebe;
+      }
+    }
+  
+    &.btn-secondary {
+        font-weight: 500;
+      background-color: transparent;
+      border: 2px solid #E06939;
+      color: #E06939;
+      border-radius: 1000px;
+  
+      &:hover {
+        background-color: rgba(165, 80, 0, 0.1);
+      }
+    }
+  
+    &.btn-tertiary {
+      background-color: transparent;
+      color: #121B52;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  
+    &.disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+  
+  .btn-icon {
+    margin-right: 0.5rem;
+  }
+  

@@ -1,0 +1,40 @@
+.mySwiper {
+  width: 100%;
+  height: 400px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #E06939;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: orange;
+  font-size: 24px;
+  z-index: 49;
+}
+
+
+
+.bg-gradient-to-t {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.text-content-with-bar {
+  border-left: 4px solid #E06939; /* Barra laranja */
+  padding-left: 10px; /* Espaçamento entre a barra e o texto */
+}
+
+
+
+.swiper-slide-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,16 @@
+.high-contrast {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+  
+  .high-contrast a {
+    color: #ff0 !important; /* Links em amarelo */
+  }
+
+  /* Estilo para manter o menu dropdown visível enquanto o mouse está sobre o botão ou o menu */
+/* Estilo para manter o menu dropdown visível enquanto o mouse está sobre o botão ou o menu */
+.relative:hover .absolute,
+.relative .absolute:hover {
+  opacity: 100;
+  visibility: visible;
+}
