@@ -1,4 +1,4 @@
-<div class="flex items-center justify-between gap-4">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
   <!-- Texto à esquerda -->
   <div class="text-left my-4">
     <p class="text-lg font-semibold text-blue-dark uppercase">{{ topText }}</p>
@@ -9,5 +9,5 @@
   </div>
 
   <!-- Condicional para exibir a imagem apenas se a variável "image" tiver valor -->
-  <img *ngIf="image" [src]="image" alt="Descrição da imagem" class="hidden md:block h-24 object-cover">
+  <img *ngIf="image" [src]="image" alt="Descrição da imagem" class="md:ml-4 h-28 object-cover">
 </div>
