@@ -17,6 +17,15 @@ import { BannerComponent } from "../../components/banner/banner.component";
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+increaseFontSize() {
+throw new Error('Method not implemented.');
+}
+decreaseFontSize() {
+throw new Error('Method not implemented.');
+}
+toggleContrast() {
+throw new Error('Method not implemented.');
+}
    newsData: NewsItem[] = [
     {
       title: "Nova Iguaçu promove mais uma feira de adoção de pets neste sábado (13)",
