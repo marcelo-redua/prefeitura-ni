@@ -1,11 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RouterModule } from '@angular/router'; // Importar o RouterModule
 
 @Component({
   selector: 'app-feedback-section',
   standalone: true,
-  imports: [CommonModule,],
+  imports: [
+    CommonModule,
+    RouterModule,
+  ],
+  
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './feedback-section.component.html',
   styleUrl: './feedback-section.component.css'

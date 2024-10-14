@@ -33,14 +33,6 @@ export class ServicePanelComponent {
     { title: 'Sinalização De Trânsito', icon: '../../../assets/servicos/icon13.svg', link: '/iluminacao-publica' },
     { title: 'Controle de Roedores', icon: '../../../assets/servicos/icon14.svg', link: '/sinalizacao-de-transito' },
     { title: 'Limpeza de Ruas/avenidas', icon: '../../../assets/servicos/icon15.svg', link: '/controle-de-roedores' },
-    { title: 'Combate à Dengue', icon: '../../../assets/servicos/icon16.svg', link: '/limpeza-de-ruas-avenidas' },
-    { title: 'Ordem Pública', icon: '../../../assets/servicos/icon17.svg', link: '/combate-a-dengue' },
-    { title: 'Outros Serviços', icon: '../../../assets/servicos/icon18.svg', link: '/portal-do-servidor' },
-    { title: 'Outros Serviços', icon: '../../../assets/servicos/icon18.svg', link: '/diario-oficial' },
-    { title: 'Outros Serviços', icon: '../../../assets/servicos/icon18.svg', link: '/portal-de-noticias' },
-    { title: 'Outros Serviços', icon: '../../../assets/servicos/icon18.svg', link: '/iluminacao-publica' },
-    { title: 'Outros Serviços', icon: '../../../assets/servicos/icon18.svg', link: '/sinalizacao-de-transito' },
-    { title: 'Outros Serviços', icon: '../../../assets/servicos/icon18.svg', link: '/controle-de-roedores' },
     { title: 'Outros Serviços', icon: '../../../assets/servicos/icon18.svg', link: '/limpeza-de-ruas-avenidas' },
   ];
 }
