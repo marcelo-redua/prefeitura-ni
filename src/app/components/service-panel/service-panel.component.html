@@ -4,26 +4,28 @@
       <h2 class="items-center font-medium text-blue-dark">Painel de Serviços</h2>
     </div>
   </div>
+  
   <ul class="grid grid-cols-2 gap-2 sm:grid-cols-4 xl:grid-cols-8">
-    <li *ngFor="let service of services" class="flex">
+    <li *ngFor="let service of services" class="flex flex-col items-center">
       <a
         [routerLink]="service.link"
-        class="flex flex-col items-center justify-center p-4 w-full h-full border border-gray rounded-xl cursor-pointer hover:border-orange transition-colors duration-200 group"
+        class="flex flex-col items-center justify-center w-full"
       >
-        <div
-          class="mb-3 transform transition-transform duration-300 group-hover:-translate-y-1"
-        >
+        <!-- Ícone com borda arredondada e fundo claro -->
+        <div class="bg-gray-light border border-gray p-4 rounded-3xl flex items-center justify-center">
           <img
             [src]="service.icon"
             [alt]="service.title"
-            width="30"
-            height="30"
+            width="70"
+            height="70"
           />
         </div>
-        <span class="text-sm font-semibold text-center text-blue-dark">
-          {{ service.title }}
-        </span>
       </a>
+      
+      <!-- Texto separado abaixo do ícone -->
+      <span class="mt-2 text-sm font-bold text-center text-blue-dark">
+        {{ service.title }}
+      </span>
     </li>
   </ul>
 </app-card>

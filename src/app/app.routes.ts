@@ -9,9 +9,31 @@ import { FaleConoscoComponent } from './pages/fale-conosco/fale-conosco.componen
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, data: { breadcrumb: 'Home' } },
-  { path: 'sitemap', component: SiteMapComponent, data: { breadcrumb: 'Mapa do site' } },
-  { path: 'acessibilidade', component: AccessibilityComponent },
-  { path: 'ouvidoria', component: OuvidoriaComponent },
-  { path: 'fale-conosco', component: FaleConoscoComponent },
-  { path: '**', component: NotFoundComponent },
+  {
+    path: 'acessibilidade',
+    component: AccessibilityComponent,
+    data: { breadcrumb: 'Acessibilidade' },
+    children: [
+      {
+        path: 'sitemap',
+        component: SiteMapComponent,
+        data: { breadcrumb: 'Mapa do site' },
+      },
+    ],
+  },
+  {
+    path: 'ouvidoria',
+    component: OuvidoriaComponent,
+    data: { breadcrumb: 'Ouvidoria' },
+  },
+  {
+    path: 'fale-conosco',
+    component: FaleConoscoComponent,
+    data: { breadcrumb: 'Fale Conosco' },
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
+    data: { breadcrumb: 'Página Não Encontrada' },
+  },
 ];

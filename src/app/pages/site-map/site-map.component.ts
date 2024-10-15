@@ -6,15 +6,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-sitemap',
   standalone: true,
   imports: [CommonModule, RouterLink],
-  template: `
-    <h1>Sitemap</h1>
-    <ul>
-      <li *ngFor="let route of filteredRoutes">
-        <a [routerLink]="route.path">{{ route.title || route.path }}</a>
-      </li>
-    </ul>
-  `
-})
+  templateUrl: './site-map.component.html', // Certifique-se de que o caminho do HTML está correto
+  styleUrls: ['./site-map.component.css']})
 export class SiteMapComponent {
   filteredRoutes: Routes = [];
 

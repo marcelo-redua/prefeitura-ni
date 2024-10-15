@@ -1,41 +1,52 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
-import { filter, map } from 'rxjs/operators';
-
-interface Breadcrumb {
-  label: string;
-  url: string[];
-}
+import { CommonModule } from '@angular/common';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-breadcrumb',
-  standalone: true,  // Marca o componente como standalone
-  imports: [RouterModule, CommonModule], // Importa os módulos necessários
-  templateUrl: './breadcrumb.component.html',
-  styleUrls: ['./breadcrumb.component.css']
+  standalone: true,
+  imports: [CommonModule, RouterModule],
+  templateUrl: './breadcrumb.component.html'
 })
 export class BreadcrumbComponent implements OnInit {
-  breadcrumbs: Breadcrumb[] = [];
+  breadcrumbs: Array<{ name: string, url: string }> = [];
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
-  ngOnInit() {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd),
-      map(() => this.buildBreadcrumbs(this.activatedRoute.root))
-    ).subscribe(breadcrumbs => {
-      this.breadcrumbs = breadcrumbs;
-    });
+  ngOnInit(): void {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.breadcrumbs = this.buildBreadcrumbs(this.activatedRoute.root);
+      });
   }
 
-  private buildBreadcrumbs(route: ActivatedRoute): Breadcrumb[] {
-    const breadcrumb: Breadcrumb = {
-      label: route.snapshot.data['breadcrumb'],
-      url: route.snapshot.url.map(segment => segment.path)
-    };
-    const url = breadcrumb.url.join('/');
-    return (route.parent ? this.buildBreadcrumbs(route.parent) : [])
-      .concat(breadcrumb);
+  buildBreadcrumbs(route: ActivatedRoute, url: string = '', breadcrumbs: Array<{ name: string, url: string }> = []): Array<{ name: string, url: string }> {
+    const children = route.children;
+
+    // Continue only if the route has children
+    if (children.length === 0) {
+      return breadcrumbs;
+    }
+
+    for (const child of children) {
+      const routeURL: string = child.snapshot.url.map(segment => segment.path).join('/');
+      if (routeURL) {
+        // Build the complete URL for the current breadcrumb
+        url += `/${routeURL}`;
+      }
+
+      // Get the breadcrumb label from the route's data
+      const label = child.snapshot.data['breadcrumb'];
+      if (label) {
+        breadcrumbs.push({ name: label, url });
+      }
+
+      // Recursive call to process child routes
+      return this.buildBreadcrumbs(child, url, breadcrumbs);
+    }
+
+    return breadcrumbs;
   }
 }

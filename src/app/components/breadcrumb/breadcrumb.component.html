@@ -1,7 +1,18 @@
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li *ngFor="let breadcrumb of breadcrumbs" class="breadcrumb-item">
-      <a [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
-    </li>
-  </ol>
-</nav>
+<div class="container mx-auto px-4">
+  <nav class="flex" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+      <li *ngFor="let breadcrumb of breadcrumbs; let last = last">
+        <div class="inline-flex items-center" *ngIf="!last">
+          <a [routerLink]="breadcrumb.url" class="text-blue-dark hover:text-blue-light font-semibold">
+            {{ breadcrumb.name }}
+          </a>
+          <svg class="w-4 h-4 mx-1 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M7.293 14.707a1 1 0 010-1.414l4-4a1 1 0 000-1.414l-4-4a1 1 0 011.414-1.414l4.707 4.707a1 1 0 010 1.414L8.707 14.707a1 1 0 01-1.414 0z"></path>
+          </svg>
+        </div>
+        <span *ngIf="last" class="text-orange">{{ breadcrumb.name }}</span>
+      </li>
+    </ol>
+  </nav>
+  
+</div>
