@@ -11,6 +11,7 @@ import { filter } from 'rxjs/operators';
 })
 export class BreadcrumbComponent implements OnInit {
   breadcrumbs: Array<{ name: string, url: string }> = [];
+  isHomePage = false; // Propriedade para verificar se estamos na rota inicial
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
@@ -19,13 +20,14 @@ export class BreadcrumbComponent implements OnInit {
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
         this.breadcrumbs = this.buildBreadcrumbs(this.activatedRoute.root);
+        this.isHomePage = this.router.url === '/'; // Verifica se a URL atual é a página inicial
       });
   }
 
   buildBreadcrumbs(route: ActivatedRoute, url: string = '', breadcrumbs: Array<{ name: string, url: string }> = []): Array<{ name: string, url: string }> {
     const children = route.children;
 
-    // Continue only if the route has children
+    // Continue apenas se a rota tiver filhos
     if (children.length === 0) {
       return breadcrumbs;
     }
@@ -33,17 +35,17 @@ export class BreadcrumbComponent implements OnInit {
     for (const child of children) {
       const routeURL: string = child.snapshot.url.map(segment => segment.path).join('/');
       if (routeURL) {
-        // Build the complete URL for the current breadcrumb
+        // Constrói a URL completa para o breadcrumb atual
         url += `/${routeURL}`;
       }
 
-      // Get the breadcrumb label from the route's data
+      // Obtém o rótulo do breadcrumb a partir dos dados da rota
       const label = child.snapshot.data['breadcrumb'];
       if (label) {
         breadcrumbs.push({ name: label, url });
       }
 
-      // Recursive call to process child routes
+      // Chamada recursiva para processar as rotas filhas
       return this.buildBreadcrumbs(child, url, breadcrumbs);
     }
 
