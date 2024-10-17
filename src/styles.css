@@ -5,6 +5,7 @@
 
 body{
     background-color: #f4f4f4;
+    @apply font-roboto;
 }
 
 .swiper-button-prev::before,

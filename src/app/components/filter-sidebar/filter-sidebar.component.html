@@ -1,0 +1,35 @@
+<div class="hidden lg:flex flex-col">
+    <div class="p-6 bg-orange rounded-t-xl border border-gray border-b-0">
+      <label for="search" class="h-10 text-blue-dark font-bold">
+        Buscar secretarias
+      </label>
+      <input
+        id="search"
+        type="text"
+        placeholder="Digite a secretaria"
+        [(ngModel)]="searchQuery"
+        class="mt-2 p-2 w-full rounded-lg border-none border-gray focus:outline-none focus:ring-2 focus:ring-orange"
+      />
+    </div>
+    <div class="bg-white p-6 rounded-b-xl border border-gray border-t-0">
+      <h3 class="text-blue-dark font-bold mb-4">Filtrar</h3>
+      <div class="space-y-2">
+        <ng-container *ngFor="let filter of ['Todas as secretarias', 'Prefeitura', 'Secretarias', 'Outros Órgãos']">
+          <div>
+            <label class="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="filter"
+                [value]="filter"
+                [(ngModel)]="selectedFilter"
+                (change)="setSelectedFilter(filter)"
+                class="form-radio text-orange"
+              />
+              <span class="text-blue-dark">{{ filter }}</span>
+            </label>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  

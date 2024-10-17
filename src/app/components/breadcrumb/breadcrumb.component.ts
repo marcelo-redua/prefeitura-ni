@@ -21,6 +21,9 @@ export class BreadcrumbComponent implements OnInit {
       .subscribe(() => {
         this.breadcrumbs = this.buildBreadcrumbs(this.activatedRoute.root);
         this.isHomePage = this.router.url === '/'; // Verifica se a URL atual é a página inicial
+
+        // Adiciona "Início" ao início do breadcrumb
+        this.breadcrumbs.unshift({ name: 'Início', url: '/' });
       });
   }
 

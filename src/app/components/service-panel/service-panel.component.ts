@@ -33,6 +33,6 @@ export class ServicePanelComponent {
     { title: 'Sinalização De Trânsito', icon: '../../../assets/servicos/transito-icon.svg', link: '/iluminacao-publica' },
     { title: 'Controle de Roedores', icon: '../../../assets/servicos/roedores-icon.svg', link: '/sinalizacao-de-transito' },
     { title: 'Limpeza de Ruas/avenidas', icon: '../../../assets/servicos/limpeza-icon.svg', link: '/controle-de-roedores' },
-    { title: 'Outros Serviços', icon: '../../../assets/servicos/outros-icon.svg', link: '/limpeza-de-ruas-avenidas' },
+    { title: 'Outros Serviços', icon: '../../../assets/servicos/outros-icon.svg', link: '/servicos' },
   ];
 }

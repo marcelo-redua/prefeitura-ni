@@ -9,6 +9,10 @@ import { FaleConoscoComponent } from './pages/fale-conosco/fale-conosco.componen
 import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { DiarioComponent } from './pages/diario/diario.component';
 import { SecretariasComponent } from './pages/secretarias/secretarias.component';
+import { SematComponent } from './pages/semat/semat.component';
+import { SemasComponent } from './pages/semas/semas.component';
+import { SemamComponent } from './pages/semam/semam.component';
+import { ServicosComponent } from './pages/servicos/servicos.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, data: { breadcrumb: 'Home' } },
@@ -45,9 +49,35 @@ export const routes: Routes = [
     data: { breadcrumb: 'Diário Oficial' },
   },
   {
-    path: 'secretarias', // Adicionando a rota de notícias
+    path: 'secretarias',
     component: SecretariasComponent,
     data: { breadcrumb: 'Secretarias' },
+    children: [
+      {
+        path: 'semat',
+        component: SematComponent,
+        data: {
+          breadcrumb: 'Secretaria Municipal de Administração e Tecnologia',
+        },
+      }, // vírgula aqui
+      {
+        path: 'semas',
+        component: SemasComponent,
+        data: { breadcrumb: 'Secretaria Municipal de Assistência Social' },
+      }, // vírgula aqui
+      {
+        path: 'semam',
+        component: SemamComponent,
+        data: {
+          breadcrumb: 'Secretaria Municipal de Agricultura e Meio Ambiente',
+        },
+      }, // não é necessário vírgula aqui, pois é o último item do array
+    ],
+  },
+  {
+    path: 'servicos',
+    component: ServicosComponent,
+    data: { breadcrumb: 'Serviços' },
   },
   {
     path: '**',
