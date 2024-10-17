@@ -13,6 +13,7 @@ import { SematComponent } from './pages/semat/semat.component';
 import { SemasComponent } from './pages/semas/semas.component';
 import { SemamComponent } from './pages/semam/semam.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
+import { TelefonesComponent } from './pages/telefones/telefones.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, data: { breadcrumb: 'Home' } },
@@ -78,6 +79,11 @@ export const routes: Routes = [
     path: 'servicos',
     component: ServicosComponent,
     data: { breadcrumb: 'Serviços' },
+  },
+  {
+    path: 'telefones',
+    component: TelefonesComponent,
+    data: { breadcrumb: 'Telefones e Endereços' },
   },
   {
     path: '**',

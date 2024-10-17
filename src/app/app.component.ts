@@ -1,6 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HighlightTextComponent } from './components/highlight-text/highlight-text.component'; // Importar o componente
+import { HighlightTextComponent } from './components/highlight-text/highlight-text.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from "./components/footer/footer.component";
 import { HomeComponent } from "./pages/home/home.component";
@@ -8,11 +8,22 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { LiveChatComponent } from "./components/live-chat/live-chat.component";
+import { TitleService } from './services/title.service'; // Importe o serviço de título
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HighlightTextComponent, FooterComponent, HomeComponent, BreadcrumbComponent, LatestNewsComponent, HeaderComponent, CarouselComponent, LiveChatComponent], // Adicionar o componente nos imports
+  imports: [
+    RouterOutlet, 
+    HighlightTextComponent, 
+    FooterComponent, 
+    HomeComponent, 
+    BreadcrumbComponent, 
+    LatestNewsComponent, 
+    HeaderComponent, 
+    CarouselComponent, 
+    LiveChatComponent
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
@@ -47,7 +58,6 @@ export class AppComponent {
             { title: 'Secretaria Municipal de Administração e Tecnologia', href: '/secretarias/semat' },
             { title: 'Secretaria Municipal de Agricultura e Meio Ambiente', href: '/secretarias/semam' },
             { title: 'Secretaria Municipal de Assistência Social', href: '/secretarias/semas' },
-            // Adicionar outros links conforme necessário
           ],
         },
       ],
@@ -61,7 +71,6 @@ export class AppComponent {
           links: [
             { title: 'Licitantes e/ou contratados sancionados', href: '/' },
             { title: 'Chamada Pública', href: '/' },
-            // Adicionar outros links conforme necessário
           ],
         },
       ],
@@ -89,5 +98,6 @@ export class AppComponent {
       ],
     },
   ];
-}
 
+  constructor(private titleService: TitleService) { } // O serviço é injetado aqui
+}
