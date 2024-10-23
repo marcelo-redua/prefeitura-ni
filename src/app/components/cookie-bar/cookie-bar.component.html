@@ -1,1 +1,21 @@
-<p>cookie-bar works!</p>
+<div *ngIf="!cookiesAccepted" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-6 shadow-lg flex justify-between items-center">
+    <div class="max-w-lg">
+      <p>
+        Para melhorar sua experiência, usamos cookies. 
+        Ao aceitar, você terá acesso a todas as funcionalidades do site.
+        <a href="/declaracao-de-cookies" class="underline text-blue-300">Saiba mais</a>
+      </p>
+    </div>
+    <div class="space-x-2">
+      <button class="bg-transparent border border-white text-white rounded px-4 py-2 hover:bg-gray-700" (click)="manageCookies()">
+        Gerenciar cookies
+      </button>
+      <button class="bg-transparent border border-white text-white rounded px-4 py-2 hover:bg-gray-700" (click)="rejectCookies()">
+        Rejeitar cookies
+      </button>
+      <button class="bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-500" (click)="acceptCookies()">
+        Aceitar cookies
+      </button>
+    </div>
+  </div>
+  
