@@ -1,1 +1,31 @@
-<p>erro 404</p>
+<main class="flex items-center justify min-h-96">
+  <div class="container mx-auto p-4 text-center">
+    <h1 class="text-orange text-5xl font-bold">Página não encontrada!</h1>
+    <div class="my-8 text-blue-dark mb-4 font-medium">
+      <p class="mb-4">
+        A página que você estava tentando acessar não está mais disponível neste
+        endereço. Você gostaria de voltar para página inicial?
+      </p>
+      <p class="mb-4">
+        Se você está certo que o endereço informado está correto mas está
+        encontrando um erro, por favor contate a
+        <strong class="underline cursor-pointer"
+          ><a href="/fale-conosco">Administração do Site.</a></strong
+        >
+      </p>
+    </div>
+
+    <app-button
+      text="PÁGINA INICIAL"
+      [isSubmit]="false"
+      href="/"
+      bgColor="bg-orange"
+      textColor="text-white"
+      borderColor="border-transparent"
+      borderWidth=""
+      hoverBgColor=""
+      hoverTextColor=""
+      hoverBorderColor=""
+    ></app-button>
+  </div>
+</main>

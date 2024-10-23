@@ -1,6 +1,5 @@
 <main>
   <section class="container mx-auto p-4">
-    
     <!-- Título Fale Conosco fora do formulário -->
     <app-highlight-text
       [topText]="''"
@@ -36,9 +35,7 @@
         </div>
 
         <div>
-          <label for="cpf" class="block text-orange font-bold mb-1"
-            >CPF:</label
-          >
+          <label for="cpf" class="block text-orange font-bold mb-1">CPF:</label>
           <input
             type="text"
             [(ngModel)]="form.cpf"
@@ -59,7 +56,7 @@
             name="email"
             class="w-full border border-gray bg-gray-light rounded p-2"
             required
-            #emailModel="ngModel" 
+            #emailModel="ngModel"
           />
         </div>
 
@@ -72,16 +69,13 @@
             [(ngModel)]="form.telefone"
             name="telefone"
             class="w-full border border-gray bg-gray-light rounded p-2"
-            
             required
           />
         </div>
 
         <!-- Campos CEP, Rua e Número -->
         <div>
-          <label for="cep" class="block text-orange font-bold mb-1"
-            >CEP:</label
-          >
+          <label for="cep" class="block text-orange font-bold mb-1">CEP:</label>
           <input
             type="text"
             [(ngModel)]="form.cep"
@@ -92,9 +86,7 @@
         </div>
 
         <div>
-          <label for="rua" class="block text-orange font-bold mb-1"
-            >Rua:</label
-          >
+          <label for="rua" class="block text-orange font-bold mb-1">Rua:</label>
           <input
             type="text"
             [(ngModel)]="form.rua"
@@ -164,12 +156,18 @@
       </div>
 
       <div class="flex justify-center">
-        <button
-          type="submit"
-          class="bg-orange text-white font-bold py-2 px-6 rounded-full hover:bg-orange-700 transition"
-        >
-          Enviar
-        </button>
+        <app-button
+          text="Enviar"
+          [isSubmit]="true"
+          href=""
+          bgColor="bg-orange"
+          textColor="text-white"
+          borderColor="border-orange"
+          borderWidth=""
+          hoverBgColor=""
+          hoverTextColor=""
+          hoverBorderColor=""
+        ></app-button>
       </div>
     </form>
   </section>

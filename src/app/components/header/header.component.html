@@ -45,10 +45,6 @@
       </div>
     </div>
   </div>
-  
-  
-
-  
 
   <div class="container mx-auto p-4 flex flex-row justify-between items-center">
     <!-- Logo -->
@@ -84,10 +80,18 @@
             Transparência
           </a>
         </li>
-        <li class="hover:text-orange transition ease-in-out duration-300">
-          <a routerLink="/ouvidoria" routerLinkActive="text-orange underline">
-            Ouvidoria
-          </a>
+        <!-- Contatos com Dropdown -->
+        <li class="relative group  transition ease-in-out duration-300">
+          <a href="#" class="inline-block">Contato</a>
+          <!-- Dropdown menu -->
+          <ul class="absolute hidden group-hover:block bg-white rounded-lg p-2 mt-0">
+            <li class="hover:bg-orange transition ease-in-out duration-300">
+              <a routerLink="/ouvidoria" class="block px-4 py-2">Ouvidoria</a>
+            </li>
+            <li class="hover:bg-orange transition ease-in-out duration-300">
+              <a routerLink="/telefones" class="block px-4 py-2">Telefones</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </nav>

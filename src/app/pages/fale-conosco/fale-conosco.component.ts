@@ -4,13 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { HighlightTextComponent } from "../../components/highlight-text/highlight-text.component";
 import { BreadcrumbComponent } from "../../components/breadcrumb/breadcrumb.component";
+import { ButtonComponent } from "../../components/button/button.component";
 
 @Component({
   standalone: true,
   selector: 'app-fale-conosco',
   templateUrl: './fale-conosco.component.html',
   styleUrls: ['./fale-conosco.component.css'],
-  imports: [FormsModule, CommonModule, HighlightTextComponent, BreadcrumbComponent]
+  imports: [FormsModule, CommonModule, HighlightTextComponent, BreadcrumbComponent, ButtonComponent]
 })
 export class FaleConoscoComponent {
   tipoSelecionado: string = '';

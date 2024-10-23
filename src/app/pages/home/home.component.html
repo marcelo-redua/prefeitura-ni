@@ -54,7 +54,19 @@
       </div>
 
       <div class="flex justify-center mt-4">
-        <app-button surface="secondary" label="Ver mais"></app-button>
+
+        <app-button
+        text="Mais Notícias"
+        [isSubmit]="false"
+        href="/noticias"
+        bgColor="bg-white"
+        textColor="text-orange"
+        borderColor="border-orange"
+        borderWidth="border-2"
+        hoverBgColor="hover:bg-orange"
+        hoverTextColor="hover:text-white"
+        hoverBorderColor=""
+      ></app-button>
       </div>
     </div>
   </section>

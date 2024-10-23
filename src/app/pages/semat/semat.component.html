@@ -5,17 +5,22 @@
       [highlightText]="'SECRETARIAS'"
       [image]="''"
     ></app-highlight-text>
-    app-info-card
+    <app-secretary-header
+      [title]="'SEMAT'"
+      [subtitle]="'Secretaria Municipal de Administração e Tecnologia'"
+      [imagePath]="'/assets/building.png'"
+    >
+    </app-secretary-header>
     <app-highlight-text
       [topText]="''"
       [highlightText]="'acesso rápido'"
       [image]="''"
     ></app-highlight-text>
-    button-grid
+    <app-secretary-quick-access></app-secretary-quick-access>
     <app-highlight-text
-      [topText]="''"
-      [highlightText]="'últimas notícias'"
-      [image]="''"
+    [topText]="'últimas'"
+    [highlightText]="'notícias'"
+    [image]="''"
     ></app-highlight-text>
     noticias
   </div>

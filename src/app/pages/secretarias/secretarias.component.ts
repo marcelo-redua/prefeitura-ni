@@ -23,6 +23,9 @@ import { SecretaryCardComponent } from '../../components/secretary-card/secretar
   styleUrls: ['./secretarias.component.css'],
 })
 export class SecretariasComponent {
+setSelectedFilter(_t10: string) {
+throw new Error('Method not implemented.');
+}
   showContent = true; // Para controlar a exibição do conteúdo
   cardData = [
     {
@@ -197,6 +200,9 @@ export class SecretariasComponent {
       linkUrl: '/secretarias/semtmu',
     },
   ];
+searchQuery: any;
+selectedFilter: any;
+filteredData: any;
 
   constructor(private router: Router) {
     this.router.events
