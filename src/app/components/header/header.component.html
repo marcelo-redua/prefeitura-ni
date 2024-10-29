@@ -19,28 +19,61 @@
 
 <!-- Header Desktop -->
 <header class="hidden lg:flex items-center flex-col">
-
   <div class="bg-orange w-full">
-    <div class="container p-4 mx-auto flex flex-row justify-between items-center">
+    <div
+      class="container p-4 mx-auto flex flex-row justify-between items-center"
+    >
       <!-- Acessibilidade e Ajuste de Tamanho -->
       <div class="flex space-x-2 items-center whitespace-nowrap">
-        <span class="text-white font-semibold"><a href="/acessibilidade">ACESSIBILIDADE</a></span>
+        <span class="text-white font-semibold"
+          ><a href="/acessibilidade">ACESSIBILIDADE</a></span
+        >
         <button class="text-white">-A</button>
         <button class="text-white">+A</button>
       </div>
-      
+
       <!-- Logotipos e Ícones -->
       <div class="flex justify-between items-center w-full space-x-6 ml-8">
-        <img src="../../../assets/leitor.svg" alt="Compatível com Leitores de Tela" class="h-12">
-        <img src="../../../assets/iguacu-digital.svg" alt="Carioca Digital" class="h-12">
-        <img src="../../../assets/informação.svg" alt="1746" class="h-12">
-        <img src="../../../assets/lgpd.svg" alt="Acesso à Informação" class="pb-5-2 h-12">
-        
+        <img
+          src="../../../assets/leitor.svg"
+          alt="Compatível com Leitores de Tela"
+          class="h-12"
+        />
+        <img
+          src="../../../assets/iguacu-digital.svg"
+          alt="Carioca Digital"
+          class="h-12"
+        />
+        <img src="../../../assets/informação.svg" alt="1746" class="h-12" />
+        <img
+          src="../../../assets/lgpd.svg"
+          alt="Acesso à Informação"
+          class="pb-5-2 h-12"
+        />
+
         <!-- Bloco de Redes Sociais com menos gap -->
         <div class="flex items-center space-x-1 pl-4 border-l-2 border-white">
-          <img src="../../../assets/white-facebook-icon.svg" alt="Facebook" class="h-8">
-          <img src="../../../assets/white-email-icon.svg" alt="Instagram" class="h-8">
-          <img src="../../../assets/white-instagram-icon.svg" alt="Email" class="h-8">
+          <a href="https://www.facebook.com/prefeituradenovaiguacu">
+            <img
+              src="../../../assets/white-facebook-icon.svg"
+              alt="Facebook"
+              class="h-8"
+            />
+          </a>
+          <a href="https://www.instagram.com/prefeituranovaiguacu">
+            <img
+              src="../../../assets/white-email-icon.svg"
+              alt="Instagram"
+              class="h-8"
+            />
+          </a>
+          <a href="">
+            <img
+              src="../../../assets/white-instagram-icon.svg"
+              alt="Email"
+              class="h-8"
+            />
+          </a>
         </div>
       </div>
     </div>
@@ -54,9 +87,15 @@
 
     <!-- Navegação -->
     <nav>
-      <ul class="flex flex-row gap-4 text-lg font-bold uppercase text-blue-dark py-2 items-center">
+      <ul
+        class="flex flex-row gap-4 text-lg font-bold uppercase text-blue-dark py-2 items-center"
+      >
         <li class="hover:text-orange transition ease-in-out duration-300">
-          <a routerLink="/" routerLinkActive="text-orange underline" [routerLinkActiveOptions]="{ exact: true }">
+          <a
+            routerLink="/"
+            routerLinkActive="text-orange underline"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
             Início
           </a>
         </li>
@@ -66,7 +105,10 @@
           </a>
         </li>
         <li class="hover:text-orange transition ease-in-out duration-300">
-          <a routerLink="/diario" routerLinkActive="text-orange underline">
+          <a
+            href="https://www.doweb.novaiguacu.rj.gov.br/portal/diario-oficial"
+            routerLinkActive="text-orange underline"
+          >
             Diário oficial
           </a>
         </li>
@@ -76,15 +118,20 @@
           </a>
         </li>
         <li class="hover:text-orange transition ease-in-out duration-300">
-          <a href="https://novaiguacu.rj.gov.br/portaldatransparencia/" routerLinkActive="text-orange underline">
+          <a
+            href="https://novaiguacu.rj.gov.br/portaldatransparencia/"
+            routerLinkActive="text-orange underline"
+          >
             Transparência
           </a>
         </li>
         <!-- Contatos com Dropdown -->
-        <li class="relative group  transition ease-in-out duration-300">
+        <li class="relative group transition ease-in-out duration-300">
           <a href="#" class="inline-block">Contato</a>
           <!-- Dropdown menu -->
-          <ul class="absolute hidden group-hover:block bg-white rounded-lg p-2 mt-0">
+          <ul
+            class="absolute hidden group-hover:block bg-white rounded-lg p-2 mt-0"
+          >
             <li class="hover:bg-orange transition ease-in-out duration-300">
               <a routerLink="/ouvidoria" class="block px-4 py-2">Ouvidoria</a>
             </li>
@@ -94,7 +141,7 @@
           </ul>
         </li>
       </ul>
-      <input type="text" class="ri">
+      <input type="text" class="ri" />
     </nav>
   </div>
 </header>
