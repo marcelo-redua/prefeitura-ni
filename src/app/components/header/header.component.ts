@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
@@ -12,25 +12,32 @@ import { RouterModule } from '@angular/router';
   ]
 })
 export class HeaderComponent {
-  private defaultFontSize: number = 16;
+  private fontSize = 16; // Tamanho de fonte padrão
+  private maxFontSize = 24; // Limite superior do tamanho da fonte
+  private minFontSize = 12; // Limite inferior do tamanho da fonte
 
-  // Função para aumentar o tamanho da fonte
+  constructor(private renderer: Renderer2) {}
+
   increaseFontSize() {
-    const root = document.documentElement;
-    const currentFontSize = parseFloat(window.getComputedStyle(root).fontSize);
-    root.style.fontSize = `${currentFontSize * 1.2}px`;
+    if (this.fontSize < this.maxFontSize) {
+      this.fontSize += 2;
+      this.renderer.setStyle(document.body, 'font-size', `${this.fontSize}px`);
+    }
   }
 
-  // Função para diminuir o tamanho da fonte
   decreaseFontSize() {
-    const root = document.documentElement;
-    const currentFontSize = parseFloat(window.getComputedStyle(root).fontSize);
-    root.style.fontSize = `${currentFontSize * 0.8}px`;
+    if (this.fontSize > this.minFontSize) {
+      this.fontSize -= 2;
+      this.renderer.setStyle(document.body, 'font-size', `${this.fontSize}px`);
+    }
   }
 
-  // Função para ativar/desativar o modo de alto contraste
   toggleContrast() {
     const body = document.body;
-    body.classList.toggle('high-contrast');
+    if (body.classList.contains('dark')) {
+      this.renderer.removeClass(body, 'dark');
+    } else {
+      this.renderer.addClass(body, 'dark');
+    }
   }
 }

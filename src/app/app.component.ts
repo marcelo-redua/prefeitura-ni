@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, Renderer2 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HighlightTextComponent } from './components/highlight-text/highlight-text.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -8,7 +8,7 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { LiveChatComponent } from "./components/live-chat/live-chat.component";
-import { TitleService } from './services/title.service'; // Importe o serviço de título
+import { TitleService } from './services/title.service';
 
 @Component({
   selector: 'app-root',
@@ -99,5 +99,15 @@ export class AppComponent {
     },
   ];
 
-  constructor(private titleService: TitleService) { } // O serviço é injetado aqui
+  constructor(private titleService: TitleService, private renderer: Renderer2) { }
+
+  toggleContrast() {
+    const body = document.body;
+    if (body.classList.contains('dark')) {
+      this.renderer.removeClass(body, 'dark');
+    } else {
+      this.renderer.addClass(body, 'dark');
+    }
+  }
 }
+  

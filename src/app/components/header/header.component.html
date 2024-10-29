@@ -23,11 +23,24 @@
   <div class="bg-orange w-full">
     <div class="container p-4 mx-auto flex flex-row justify-between items-center">
       <!-- Acessibilidade e Ajuste de Tamanho -->
-      <div class="flex space-x-2 items-center whitespace-nowrap">
-        <span class="text-white font-semibold"><a href="/acessibilidade">ACESSIBILIDADE</a></span>
-        <button class="text-white">-A</button>
-        <button class="text-white">+A</button>
+      <div class="flex flex-col items-center space-y-2">
+        <span class="text-white font-semibold">Acessibilidade</span>
+        <div class="flex space-x-2">
+          <button (click)="increaseFontSize()" class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl">+</button>
+          <button (click)="decreaseFontSize()" class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl">-</button>
+          <button (click)="toggleContrast()" class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl">
+            <img src="/assets/icon-contrast.svg" alt="Contraste" class="w-5 h-5" />
+          </button>
+          <a routerLink="/acessibilidade/sitemap" class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl">
+            <img src="/assets/icon-grid.svg" alt="Grade" class="w-5 h-5" />
+          </a>
+          <a routerLink="/acessibilidade" class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl">
+            <img src="/assets/icon-accessibility.svg" alt="Acessibilidade" class="w-5 h-5" />
+          </a>
+        </div>
       </div>
+      
+      
       
       <!-- Logotipos e Ícones -->
       <div class="flex justify-between items-center w-full space-x-6 ml-8">
