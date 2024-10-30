@@ -1,5 +1,4 @@
 import { Component, Renderer2 } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -15,6 +14,7 @@ export class HeaderComponent {
   private fontSize = 16; // Tamanho de fonte padrão
   private maxFontSize = 24; // Limite superior do tamanho da fonte
   private minFontSize = 12; // Limite inferior do tamanho da fonte
+  private dyslexiaFontEnabled = false; // Estado da fonte disléxica
 
   constructor(private renderer: Renderer2) {}
 
@@ -38,6 +38,17 @@ export class HeaderComponent {
       this.renderer.removeClass(body, 'dark');
     } else {
       this.renderer.addClass(body, 'dark');
+    }
+  }
+
+  toggleDyslexiaFont() {
+    this.dyslexiaFontEnabled = !this.dyslexiaFontEnabled;
+    const body = document.body;
+
+    if (this.dyslexiaFontEnabled) {
+      this.renderer.addClass(body, 'dyslexia-font');
+    } else {
+      this.renderer.removeClass(body, 'dyslexia-font');
     }
   }
 }

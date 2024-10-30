@@ -24,12 +24,51 @@
       class="container p-4 mx-auto flex flex-row justify-between items-center"
     >
       <!-- Acessibilidade e Ajuste de Tamanho -->
-      <div class="flex space-x-2 items-center whitespace-nowrap">
-        <span class="text-white font-semibold"><a href="/acessibilidade">ACESSIBILIDADE</a></span>
-        <button class="text-white">-A</button>
-        <button class="text-white">+A</button>
-      </div>
-      
+<!-- Acessibilidade e Ajuste de Tamanho -->
+<div class="flex flex-col items-center space-y-2">
+  <span class="text-white font-semibold">Acessibilidade</span>
+  <div class="flex space-x-2">
+    <button 
+      (click)="increaseFontSize()" 
+      class="bg-white w-8 h-8 rounded-full flex items-center justify-center text-blue-dark text-xl" 
+      title="Aumentar tamanho da fonte">+</button>
+    
+    <button 
+      (click)="decreaseFontSize()" 
+      class="bg-white w-8 h-8 rounded-full flex items-center justify-center text-blue-dark text-xl" 
+      title="Diminuir tamanho da fonte">-</button>
+    
+    <button 
+      (click)="toggleContrast()" 
+      class="bg-white w-8 h-8 rounded-full flex items-center justify-center text-blue-dark text-xl" 
+      title="Alternar contraste">
+      <img src="/assets/icon-contrast.svg" alt="Contraste" class="w-5 h-5" />
+    </button>
+
+    <button 
+      (click)="toggleDyslexiaFont()" 
+      class="bg-white w-8 h-8 rounded-full flex items-center justify-center text-blue-dark text-xl" 
+      title="Ativar fonte para dislexia">
+      <img src="/assets/icon-dyslexia.svg" alt="Fonte para Dislexia" class="w-5 h-5" />
+    </button>
+
+    <a 
+      routerLink="/acessibilidade/sitemap" 
+      class="bg-white w-8 h-8 rounded-full flex items-center justify-center text-blue-dark text-xl" 
+      title="Mapa do site">
+      <img src="/assets/icon-grid.svg" alt="Grade" class="w-5 h-5" />
+    </a>
+    
+    <a 
+      routerLink="/acessibilidade" 
+      class="bg-white w-8 h-8 rounded-full flex items-center justify-center text-blue-dark text-xl" 
+      title="Configurações de acessibilidade">
+      <img src="/assets/icon-accessibility.svg" alt="Acessibilidade" class="w-5 h-5" />
+    </a>
+  </div>
+</div>
+
+
       <!-- Logotipos e Ícones -->
       <div class="flex justify-between items-center w-full space-x-6 ml-8">
         <img
@@ -51,21 +90,27 @@
 
         <!-- Bloco de Redes Sociais com menos gap -->
         <div class="flex items-center space-x-1 pl-4 border-l-2 border-white">
-          <a href="https://www.facebook.com/prefeituradenovaiguacu">
+          <a
+            target="_blank"
+            href="https://www.facebook.com/prefeituradenovaiguacu"
+          >
             <img
               src="../../../assets/white-facebook-icon.svg"
               alt="Facebook"
               class="h-8"
             />
           </a>
-          <a href="https://www.instagram.com/prefeituranovaiguacu">
+          <a
+            target="_blank"
+            href="https://www.instagram.com/prefeituranovaiguacu"
+          >
             <img
               src="../../../assets/white-email-icon.svg"
               alt="Instagram"
               class="h-8"
             />
           </a>
-          <a href="">
+          <a target="_blank" href="">
             <img
               src="../../../assets/white-instagram-icon.svg"
               alt="Email"
