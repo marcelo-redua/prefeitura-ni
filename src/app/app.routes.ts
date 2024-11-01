@@ -1,4 +1,3 @@
-// src/app/app.routes.ts
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
@@ -21,13 +20,11 @@ export const routes: Routes = [
     path: 'acessibilidade',
     component: AccessibilityComponent,
     data: { breadcrumb: 'Acessibilidade' },
-    children: [
-      {
-        path: 'sitemap',
-        component: SiteMapComponent,
-        data: { breadcrumb: 'Mapa do site' },
-      },
-    ],
+  },
+  {
+    path: 'sitemap',
+    component: SiteMapComponent,
+    data: { breadcrumb: 'Mapa do site' },
   },
   {
     path: 'ouvidoria',
@@ -40,12 +37,12 @@ export const routes: Routes = [
     data: { breadcrumb: 'Fale Conosco' },
   },
   {
-    path: 'noticias', // Adicionando a rota de notícias
+    path: 'noticias',
     component: NoticiasComponent,
     data: { breadcrumb: 'Notícias' },
   },
   {
-    path: 'diario', // Adicionando a rota de notícias
+    path: 'diario',
     component: DiarioComponent,
     data: { breadcrumb: 'Diário Oficial' },
   },
@@ -57,22 +54,18 @@ export const routes: Routes = [
       {
         path: 'semat',
         component: SematComponent,
-        data: {
-          breadcrumb: 'Secretaria Municipal de Administração e Tecnologia',
-        },
-      }, // vírgula aqui
+        data: { breadcrumb: 'Secretaria Municipal de Administração e Tecnologia' },
+      },
       {
         path: 'semas',
         component: SemasComponent,
         data: { breadcrumb: 'Secretaria Municipal de Assistência Social' },
-      }, // vírgula aqui
+      },
       {
         path: 'semam',
         component: SemamComponent,
-        data: {
-          breadcrumb: 'Secretaria Municipal de Agricultura e Meio Ambiente',
-        },
-      }, // não é necessário vírgula aqui, pois é o último item do array
+        data: { breadcrumb: 'Secretaria Municipal de Agricultura e Meio Ambiente' },
+      },
     ],
   },
   {

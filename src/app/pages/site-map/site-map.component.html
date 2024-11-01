@@ -1,7 +1,84 @@
 <main class="container mx-auto p-4">
   <app-highlight-text
-  [topText]="''"
-  [highlightText]="'Mapa do Site'"
-  [image]="''"
-></app-highlight-text>
+    [topText]="''"
+    [highlightText]="'Mapa do Site'"
+    [image]="''"
+  ></app-highlight-text>
+  
+  <!-- Seção de Acesso Rápido -->
+  <div class="mb-8">
+    <h2 class="font-bold text-lg text-orange">Acesso Rápido</h2>
+    <div
+      class="border-l-2 border-dotted border-gray-300 ml-2 pl-4 space-y-2 mt-2"
+    >
+      <a href="https://novaiguacu.rj.gov.br/portaldatransparencia/" class="text-blue-light hover:text-blue-dark transition-colors">Portal da Transparência</a><br />
+      <a routerLink="/servicos" class="text-blue-light hover:text-blue-dark transition-colors">Portal de Serviços</a><br />
+      <a routerLink="/sei" class="text-blue-light hover:text-blue-dark transition-colors">SEI!</a><br />
+
+    </div>
+  </div>
+
+  <div class="mb-8">
+    <h2 class="font-bold text-lg text-orange">Informativos</h2>
+    <div
+      class="border-l-2 border-dotted border-gray-300 ml-2 pl-4 space-y-2 mt-2"
+    >
+      <a href="https://www.doweb.novaiguacu.rj.gov.br/portal/diario-oficial" class="text-blue-light hover:text-blue-dark transition-colors">Diário Oficial</a><br />
+      <a routerLink="/noticias" class="text-blue-light hover:text-blue-dark transition-colors">Notícias</a><br />
+    </div>
+  </div>
+
+  <!-- Seção de Mais Acessados -->
+  <div>
+    <h2 class="font-bold text-lg text-orange">Estrutura Organizacional</h2>
+    <div
+      class="border-l-2 border-dotted border-gray-300 ml-2 pl-4 space-y-2 mt-2 mb-9"
+    >
+      <!-- Subtítulo Secretarias -->
+      <h3 class="font-semibold text-orange">Secretarias</h3>
+      <div class="ml-4">
+        <a routerLink="/secretarias/semat" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Administração e Tecnologia</a><br />
+        <a routerLink="/secretarias/semam" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Agricultura e Meio Ambiente</a><br />
+        <a routerLink="/secretarias/semas" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Assistência Social</a><br />
+        <a routerLink="/secretarias/semconger" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Controle Geral</a><br />
+        <a routerLink="/secretarias/semcult" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Cultura</a><br />
+        <a routerLink="/secretarias/smdc" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Defesa Civil</a><br />
+        <a routerLink="/secretarias/semdettur" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Desenvolvimento Econômico, Trabalho e Turismo</a><br />
+        <a routerLink="/secretarias/semdur" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Desenvolvimento Urbano</a><br />
+        <a routerLink="/secretarias/semef" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Economia, Planejamento e Finanças</a><br />
+        <a routerLink="/secretarias/semed" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Educação</a><br />
+        <a routerLink="/secretarias/semel" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Esporte e Lazer</a><br />
+        <a routerLink="/secretarias/semug" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Governo</a><br />
+        <a routerLink="/secretarias/semif" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Infraestrutura</a><br />
+        <a routerLink="/secretarias/semus" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Saúde</a><br />
+        <a routerLink="/secretarias/semseg" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Segurança Pública</a><br />
+        <a routerLink="/secretarias/semserp" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Serviços Públicos</a><br />
+        <a routerLink="/secretarias/semtmu" class="text-blue-light hover:text-blue-dark transition-colors">Secretaria Municipal de Transporte, Trânsito e Mobilidade Urbana</a>
+      </div>
+
+
+
+      <!-- Subtítulo Órgãos Municipais -->
+      <h3 class="font-semibold text-orange mt-4">Órgãos Municipais</h3>
+      <div class="ml-4">
+        <a href="#" class="text-blue-light hover:text-blue-dark transition-colors">CODENI – Companhia de Desenvolvimento de Nova Iguaçu</a><br />
+        <a href="#" class="text-blue-light hover:text-blue-dark transition-colors">EMLURB – Empresa Municipal de Limpeza Urbana</a><br />
+        <a href="#" class="text-blue-light hover:text-blue-dark transition-colors">FENIG – Fundação Educacional e Cultural de Nova Iguaçu</a><br />
+        <a href="#" class="text-blue-light hover:text-blue-dark transition-colors">PREVINI – Previdência dos Servidores Municipais de Nova Iguaçu</a><br />
+        <a href="#" class="text-blue-light hover:text-blue-dark transition-colors">PGM – Procuradoria Geral do Município</a>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Seção de Acesso Rápido -->
+    <div class="mb-8">
+      <h2 class="font-bold text-lg text-orange">Contato</h2>
+      <div
+        class="border-l-2 border-dotted border-gray-300 ml-2 pl-4 space-y-2 mt-2"
+      >
+        <a routerLink="/ouvidoria" class="text-blue-light hover:text-blue-dark transition-colors">Ouvidoria</a><br />
+        <a routerLink="/fale-conosco" class="text-blue-light hover:text-blue-dark transition-colors">Fale Conosco</a><br />
+        <a routerLink="/telefones" class="text-blue-light hover:text-blue-dark transition-colors">Telefones e Endereços</a><br />
+      </div>
+    </div>
 </main>

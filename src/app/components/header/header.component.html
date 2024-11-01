@@ -25,16 +25,20 @@
       <div class="flex flex-col items-center space-y-2">
         <span class="text-white font-semibold">Acessibilidade</span>
         <div class="flex space-x-2">
-          <button (click)="increaseFontSize()" class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl">+</button>
-          <button (click)="decreaseFontSize()" class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl">-</button>
-          <button (click)="toggleContrast()" class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl">
-            <img src="/assets/icon-contrast.svg" alt="Contraste" class="w-5 h-5" />
+          <button (click)="increaseFontSize()" class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl">
+            <img src="/assets/+.svg" alt="" class="w-5 h-5">
           </button>
-          <a routerLink="/acessibilidade/sitemap" class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl">
-            <img src="/assets/icon-grid.svg" alt="Grade" class="w-5 h-5" />
+          <button (click)="decreaseFontSize()" class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl">
+            <img src="/assets/-.svg" alt="" class="w-5 h-5">
+          </button>
+          <button (click)="toggleContrast()" class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl">
+            <img src="/assets/contraste.svg" alt="Contraste" class="w-5 h-5" />
+          </button>
+          <a routerLink="/sitemap" class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl">
+            <img src="/assets/sitemap.svg" alt="Grade" class="w-5 h-5" />
           </a>
           <a routerLink="/acessibilidade" class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl">
-            <img src="/assets/icon-accessibility.svg" alt="Acessibilidade" class="w-5 h-5" />
+            <img src="/assets/acessibilidade.svg" alt="Acessibilidade" class="w-5 h-5" />
           </a>
         </div>
       </div>

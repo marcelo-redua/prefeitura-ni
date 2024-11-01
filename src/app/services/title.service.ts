@@ -40,8 +40,20 @@ export class TitleService {
     if (url.includes('fale-conosco')) {
       return 'Fale Conosco - ' + this.siteSuffix;
     } 
+    if (url.includes('telefones')) {
+      return 'Telefones e Endereços - ' + this.siteSuffix;
+    } 
     if (url.includes('noticias')) {
       return 'Notícias - ' + this.siteSuffix;
+    }
+    if (url.includes('acessibilidade')) {
+      return 'Acessibilidade - ' + this.siteSuffix;
+    }
+    if (url.includes('sitemap')) {
+      return 'Mapa do site - ' + this.siteSuffix;
+    }
+    if (url.includes('servicos')) {
+      return 'Serviços - ' + this.siteSuffix;
     }
   
     // Retorna um título padrão se não corresponder a nenhuma rota específica
