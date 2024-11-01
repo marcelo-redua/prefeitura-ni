@@ -8,6 +8,11 @@ body{
     @apply font-roboto;
 }
 
+.dyslexia-font {
+  font-family: 'OpenDyslexic', Arial, sans-serif; /* Inclua a fonte desejada */
+}
+
+
 .swiper-button-prev::before,
 .swiper-button-next::before {
   color: gray !important; /* Força a cor das setas para cinza */
