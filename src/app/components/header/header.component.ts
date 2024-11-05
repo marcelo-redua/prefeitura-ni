@@ -1,4 +1,4 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, Renderer2, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -10,13 +10,21 @@ import { RouterModule } from '@angular/router';
     RouterModule,
   ]
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   private fontSize = 16; // Tamanho de fonte padrão
   private maxFontSize = 24; // Limite superior do tamanho da fonte
   private minFontSize = 12; // Limite inferior do tamanho da fonte
   private dyslexiaFontEnabled = false; // Estado da fonte disléxica
 
   constructor(private renderer: Renderer2) {}
+
+  ngOnInit(): void {
+    // Carrega a preferência de contraste do usuário do localStorage
+    const isDarkMode = localStorage.getItem('isDarkMode') === 'true';
+    if (isDarkMode) {
+      this.renderer.addClass(document.body, 'dark');
+    }
+  }
 
   increaseFontSize() {
     if (this.fontSize < this.maxFontSize) {
@@ -34,10 +42,14 @@ export class HeaderComponent {
 
   toggleContrast() {
     const body = document.body;
-    if (body.classList.contains('dark')) {
+    const isDarkMode = body.classList.contains('dark');
+
+    if (isDarkMode) {
       this.renderer.removeClass(body, 'dark');
+      localStorage.setItem('isDarkMode', 'false');
     } else {
       this.renderer.addClass(body, 'dark');
+      localStorage.setItem('isDarkMode', 'true');
     }
   }
 

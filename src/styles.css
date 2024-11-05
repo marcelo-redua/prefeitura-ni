@@ -2,36 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body{
-    background-color: #f4f4f4;
-    @apply font-roboto;
+/* Estilos para o modo escuro */
+body.dark {
+  background-color: #000; /* Cor de fundo para alto contraste */
+  color: #fff;            /* Cor do texto para alto contraste */
 }
 
+/* Para componentes específicos em modo escuro */
+body.dark .component {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Configuração geral */
+body {
+  background-color: #f4f4f4;
+  @apply font-roboto;
+}
+
+/* Estilo para fonte disléxica */
 .dyslexia-font {
   font-family: 'OpenDyslexic', Arial, sans-serif; /* Inclua a fonte desejada */
 }
 
-
+/* Configurações para o Swiper */
 .swiper-button-prev::before,
 .swiper-button-next::before {
   color: gray !important; /* Força a cor das setas para cinza */
   font-size: 24px; /* Ajuste o tamanho das setas, se necessário */
 }
 
-.swiper-button-prev::before,
-.swiper-button-next::before {
-  color: gray !important; /* Força a cor das setas para cinza */
-  font-size: 24px; /* Ajuste o tamanho das setas, se necessário */
-}
-
-/* Para as bolinhas de paginação */
+/* Bolinhas de paginação */
 .swiper-pagination-bullet {
   background-color: gray !important; /* Força a cor cinza nas bolinhas de paginação */
   opacity: 1 !important; /* Garante que a cor não seja afetada pela transparência */
 }
 
-/* Para a bolinha ativa */
+/* Bolinha ativa da paginação */
 .swiper-pagination-bullet-active {
   background-color: red !important; /* Cor vermelha para a bolinha ativa */
 }

@@ -1,10 +1,12 @@
 <app-card>
   <div class="flex flex-col gap-5 mb-7 sm:flex-row">
-    <div class="flex gap-4 border-b border-gray">
-      <h2 class="items-center font-medium text-blue-dark">Painel de Serviços</h2>
+    <div class="flex gap-4 border-b border-gray dark:border-high-contrast-text">
+      <h2 class="items-center font-medium text-blue-dark dark:text-high-contrast-text">
+        Painel de Serviços
+      </h2>
     </div>
   </div>
-  
+
   <ul class="grid grid-cols-2 gap-2 sm:grid-cols-4 xl:grid-cols-8">
     <li *ngFor="let service of services" class="flex flex-col items-center">
       <a
@@ -12,7 +14,7 @@
         class="flex flex-col items-center justify-center w-full"
       >
         <!-- Ícone com borda arredondada e fundo claro -->
-        <div class="bg-gray-light border border-gray p-4 rounded-3xl flex items-center justify-center">
+        <div class="bg-gray-light dark:bg-high-contrast-bg border border-gray dark:border-high-contrast-text p-4 rounded-3xl flex items-center justify-center">
           <img
             [src]="service.icon"
             [alt]="service.title"
@@ -23,7 +25,7 @@
       </a>
       
       <!-- Texto separado abaixo do ícone -->
-      <span class="mt-2 text-sm font-bold text-center text-blue-dark">
+      <span class="mt-2 text-sm font-bold text-center text-blue-dark dark:text-high-contrast-text">
         {{ service.title }}
       </span>
     </li>

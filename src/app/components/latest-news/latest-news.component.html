@@ -1,5 +1,5 @@
 <div class="grid grid-cols-1 gap-6 mb-4">
-  <a *ngFor="let item of news; index as i" href="{{ item.link }}" class="flex flex-col sm:flex-row overflow-hidden h-[188px]">
+  <a *ngFor="let item of news; index as i" href="{{ item.link }}" class="flex flex-col sm:flex-row overflow-hidden h-[188px] dark:bg-high-contrast-bg dark:text-high-contrast-text">
     
     <!-- Imagem do Card -->
     <div class="sm:w-1/3 h-full">
@@ -10,16 +10,16 @@
     <div class="sm:w-2/3 p-4 flex flex-col justify-between h-full">
       <div>
         <!-- Data -->
-        <p class="text-orange font-semibold text-sm mb-2">{{ item.date }}</p>
+        <p class="text-orange font-semibold text-sm mb-2 dark:text-high-contrast-text">{{ item.date }}</p>
 
         <!-- Título -->
-        <h2 class="text-lg font-bold text-blue-dark mb-2">{{ item.title }}</h2>
+        <h2 class="text-lg font-bold text-blue-dark mb-2 dark:text-high-contrast-text">{{ item.title }}</h2>
       </div>
 
       <!-- Botão Ver Mais com Ícone -->
       <div class="flex justify-start items-center">
-        <span class="text-orange font-semibold text-sm mr-2">Ver mais</span>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-orange">
+        <span class="text-orange font-semibold text-sm mr-2 dark:text-high-contrast-text">Ver mais</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-orange dark:text-high-contrast-text">
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
         </svg>
       </div>
