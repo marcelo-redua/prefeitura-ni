@@ -1,0 +1,34 @@
+<main class="container mx-auto p-4">
+    <!-- Contêiner principal dos resultados da pesquisa -->
+    <div class="search-results">
+      <!-- Título da seção de resultados da pesquisa -->
+      <h2>Resultados da Pesquisa</h2>
+  
+      <!-- Verifica se há resultados na variável 'searchResults'. Se houver, exibe a lista de resultados; caso contrário, exibe a mensagem de "nenhum resultado" -->
+      <div *ngIf="searchResults.length > 0; else noResults">
+        
+        <!-- Lista de resultados da pesquisa -->
+        <ul>
+          <!-- Loop através dos resultados da pesquisa, exibindo cada um em um item de lista -->
+          <li *ngFor="let result of searchResults">
+            
+            <!-- Link que redireciona para a página do resultado. O 'routerLink' é usado para navegar para o caminho definido em 'result.path' -->
+            <a [routerLink]="result.path" class="search-result-item">
+              
+              <!-- Título do resultado -->
+              <h3 class="text-orange">{{ result.title }}</h3>
+              
+              <!-- Descrição do resultado -->
+              <p>{{ result.description }}</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Template que será exibido se não houver resultados -->
+      <ng-template #noResults>
+        <p>Nenhum resultado encontrado para "{{ searchQuery }}"</p>
+      </ng-template>
+    </div>
+  </main>
+  

@@ -1,13 +1,17 @@
 <main>
+  <!-- Seção principal do formulário de contato -->
   <section class="container mx-auto p-4">
-    <!-- Título Fale Conosco fora do formulário -->
+    <!-- Componente 'app-highlight-text' exibe um título destacado.
+         O 'topText' pode ser usado para um texto opcional acima do título, 
+         e 'highlightText' é o título principal destacado. A 'image' é uma imagem associada ao título, 
+         mas neste caso está vazia. -->
     <app-highlight-text
       [topText]="''"
       [highlightText]="'Fale Conosco'"
       [image]="''"
     ></app-highlight-text>
 
-    <!-- Formulário -->
+    <!-- Formulário de contato -->
     <form
       (ngSubmit)="onSubmit()"
       #faleConoscoForm="ngForm"

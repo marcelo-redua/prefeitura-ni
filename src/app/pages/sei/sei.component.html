@@ -1,1 +1,48 @@
-<p>sei works!</p>
+<main>
+  <div class="container p-4 mx-auto">
+    <app-highlight-text
+      [topText]="''"
+      [highlightText]="'SISTEMA ELETÔNICO DE INFORMAÇÃO'"
+      [image]="''"
+    ></app-highlight-text>
+    <app-banner> </app-banner>
+    <app-highlight-text
+      [topText]="'O QUE É O'"
+      [highlightText]="'SEI?'"
+      [image]="''"
+    ></app-highlight-text>
+    <p class="text-blue-dark">
+      O <strong>Sistema Eletrônico de Informação (SEI)</strong> é uma plataforma
+      para a gestão digital de documentos e processos, desenvolvida pelo
+      <strong>Tribunal Regional Federal da 4ª Região (TRF4).</strong>
+    </p>
+    <app-card-sei [items]="cardSeiItems"></app-card-sei>
+    <app-highlight-text
+      [topText]="''"
+      [highlightText]="'ACESSO RÁPIDO'"
+      [image]="''"
+    ></app-highlight-text>
+    <app-link-card [buttons]="buttons"></app-link-card>
+    <app-highlight-text
+      [topText]="''"
+      [highlightText]="'PERGUNTAS FREQUENTES'"
+      [image]="''"
+    ></app-highlight-text>
+    <app-faq></app-faq>
+    <div class="flex flex-col items-center justify-center mx-auto text-center">
+      <h1 class="font-bold text-orange text-3xl mb-4">
+        Ainda tem alguma dúvida?
+      </h1>
+      <p class="text-blue-dark">
+        Entre em contato com nosso suporte pelo
+        <a href="" class="underline font-bold">link</a> ou através do
+        <a
+          href="mailto:suporte.sei&#64;novaiguacu.rj.gov.br"
+          class="underline font-bold"
+        >
+          suporte.sei&#64;novaiguacu.rj.gov.br
+        </a>
+      </p>
+    </div>
+  </div>
+</main>

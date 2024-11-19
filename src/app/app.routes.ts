@@ -28,6 +28,7 @@ import { SemusComponent } from './pages/semus/semus.component';
 import { SemsegComponent } from './pages/semseg/semseg.component';
 import { SemserpComponent } from './pages/semserp/semserp.component';
 import { SemtmuComponent } from './pages/semtmu/semtmu.component';
+import { SearchComponent } from './pages/search/search.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, data: { breadcrumb: 'Home' } },
@@ -69,7 +70,9 @@ export const routes: Routes = [
       {
         path: 'semat',
         component: SematComponent,
-        data: { breadcrumb: 'Secretaria Municipal de Administração e Tecnologia' },
+        data: {
+          breadcrumb: 'Secretaria Municipal de Administração e Tecnologia',
+        },
       },
       {
         path: 'semas',
@@ -79,7 +82,9 @@ export const routes: Routes = [
       {
         path: 'semam',
         component: SemamComponent,
-        data: { breadcrumb: 'Secretaria Municipal de Agricultura e Meio Ambiente' },
+        data: {
+          breadcrumb: 'Secretaria Municipal de Agricultura e Meio Ambiente',
+        },
       },
       {
         path: 'semconger',
@@ -99,7 +104,10 @@ export const routes: Routes = [
       {
         path: 'semdettur',
         component: SemdetturComponent,
-        data: { breadcrumb: 'Secretaria Municipal de Defesa Civil Secretaria Municipal de Desenvolvimento Econômico, Trabalho e Turismo' },
+        data: {
+          breadcrumb:
+            'Secretaria Municipal de Defesa Civil Secretaria Municipal de Desenvolvimento Econômico, Trabalho e Turismo',
+        },
       },
       {
         path: 'semdur',
@@ -109,7 +117,10 @@ export const routes: Routes = [
       {
         path: 'semef',
         component: SemefComponent,
-        data: { breadcrumb: 'Secretaria Municipal de Economia, Planejamento e Finanças' },
+        data: {
+          breadcrumb:
+            'Secretaria Municipal de Economia, Planejamento e Finanças',
+        },
       },
       {
         path: 'semed',
@@ -149,7 +160,10 @@ export const routes: Routes = [
       {
         path: 'semtmu',
         component: SemtmuComponent,
-        data: { breadcrumb: 'Secretaria Municipal de Transporte, Trânsito e Mobilidade Urbana' },
+        data: {
+          breadcrumb:
+            'Secretaria Municipal de Transporte, Trânsito e Mobilidade Urbana',
+        },
       },
     ],
   },
@@ -167,6 +181,10 @@ export const routes: Routes = [
     path: 'sei',
     component: SeiComponent,
     data: { breadcrumb: 'Sistema Eletrônico de Informações' },
+  },
+  { path: 'resultados',
+    component: SearchComponent,
+    data: { breadcrumb: 'Pesquisa' },
   },
   {
     path: '**',

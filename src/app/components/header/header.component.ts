@@ -1,5 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { Component, Renderer2, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +10,8 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [
     RouterModule,
+    CommonModule,
+    FormsModule
   ]
 })
 export class HeaderComponent implements OnInit {
@@ -15,8 +19,11 @@ export class HeaderComponent implements OnInit {
   private maxFontSize = 24; // Limite superior do tamanho da fonte
   private minFontSize = 12; // Limite inferior do tamanho da fonte
   private dyslexiaFontEnabled = false; // Estado da fonte disléxica
+  searchResults: string[] = []; // Resultados da pesquisa
+  private data: string[] = ['Início', 'Secretarias', 'Diário Oficial', 'Notícias', 'Transparência']; // Dados para exemplo de busca
+  searchQuery: string = ''; // Armazena o termo de pesquisa
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private router: Router) {}
 
   ngOnInit(): void {
     // Carrega a preferência de contraste do usuário do localStorage
@@ -62,5 +69,17 @@ export class HeaderComponent implements OnInit {
     } else {
       this.renderer.removeClass(body, 'dyslexia-font');
     }
+  }
+
+  onSearch(event: Event) {
+    const query = (event.target as HTMLInputElement).value.toLowerCase();
+    this.searchResults = this.data.filter(item =>
+      item.toLowerCase().includes(query)
+    );
+  }
+
+  onSearchSubmit() {
+    // Redireciona para a página de resultados com a query
+    this.router.navigate(['/resultados'], { queryParams: { query: this.searchQuery } });
   }
 }
