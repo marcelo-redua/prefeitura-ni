@@ -19,13 +19,13 @@ interface CardSeiItem {
         <h2 class="text-xl font-bold text-gray-800 mb-2 border-b border-gray text-blue-dark">
           {{ item.title }}
         </h2>
-        <p class="text-blue-dark text-base font-medium">
-          {{ item.description }}
-        </p>
+        <p class="text-blue-dark text-base" [innerHTML]="item.description"></p>
       </div>
     </div>
   `,
-  styles: [],
+  styles: [
+    ` `
+  ],
 })
 export class CardSeiComponent {
   @Input() items: CardSeiItem[] = [];

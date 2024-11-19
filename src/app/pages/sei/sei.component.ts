@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { HighlightTextComponent } from "../../components/highlight-text/highlight-text.component";
-import { BannerComponent } from "../../components/banner/banner.component";
-import { FaqComponent } from "../../components/faq/faq.component";
-import { LinkCardComponent } from "../../components/link-card/link-card.component";
-import { CardSeiComponent } from "../../components/card-sei/card-sei.component";
+import { HighlightTextComponent } from '../../components/highlight-text/highlight-text.component';
+import { BannerComponent } from '../../components/banner/banner.component';
+import { FaqComponent } from '../../components/faq/faq.component';
+import { LinkCardComponent } from '../../components/link-card/link-card.component';
+import { CardSeiComponent } from '../../components/card-sei/card-sei.component';
 
 @Component({
   selector: 'app-sei',
@@ -41,20 +41,22 @@ export class SeiComponent {
     {
       title: 'Como faço para acessar o sistema?',
       description:
-        'Para apoiar os servidores na utilização do SEI, foram disponibilizados alguns materiais de orientação, como cursos, seminários, manuais e testes para serem realizados em um ambiente de treinamento.',
+        'Para apoiar os servidores na utilização do SEI, foram disponibilizados alguns materiais de orientação, como <strong class="text-orange font-bold">cursos</strong>, <strong class="text-orange font-bold">seminários</strong>, <strong class="text-orange font-bold">manuais</strong> e <strong class="text-orange font-bold">testes</strong> para serem realizados em um ambiente de treinamento.',
     },
     {
       title: 'Quem pode usar o SEI?',
       description:
-        'Todos os funcionários que trabalham com processos administrativos: Técnicos de processos, Secretários, Fiscais, Gestores, Assessores e a População.',
+        'Todos os funcionários que trabalham com processos administrativos: <strong class="text-orange font-bold">Técnicos de processos</strong>, <strong class="text-orange font-bold">Secretários</strong>, <strong class="text-orange font-bold">Fiscais</strong>, <strong class="text-orange font-bold">Gestores</strong>, <strong class="text-orange font-bold">Assessores</strong> e a <strong class="text-orange font-bold">População</strong>.',
     },
     {
       title: 'Quais os benefícios do SEI?',
-      description: 'Fácil abertura de processos;',
+      description:
+        '<ul  class="space-y-2"><li class="flex items-center text-blue-dark font-bold"><img src="assets/icon/check.svg" alt="Check icon" class="w-5 h-5 mr-2 text-orange" />Fácil abertura de processos;</li><li class="flex items-center text-blue-dark font-bold">Processos online descomplicados;</li><li class="flex items-center text-blue-dark font-bold">Integridade das informações (assinatura, histórico e criptografia);</li><li class="flex items-center text-blue-dark font-bold">Assinatura eletrônica.</li></ul>',
     },
     {
       title: 'O que pode ser feito dentro do SEI?',
-      description: 'Controle de processos;',
+      description:
+        'Controle de processos;<br>Gestão de documentos;<br>Tramitação entre os setores;<br>Assinatura eletrônica;<br>Controle de prazos.',
     },
   ];
 }
