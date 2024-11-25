@@ -19,75 +19,80 @@
 
 <!-- Header Desktop -->
 <header class="hidden lg:flex items-center flex-col">
-  <div class="bg-orange w-full">
+  <div class="bg-orange w-full h-[80px]">
     <div
-      class="container p-4 mx-auto flex flex-row justify-between items-center"
+      class="container mx-auto flex flex-row justify-between items-center h-full px-4"
     >
+
+  
+      <!-- Logotipos e Ícones -->
+      <div class="flex justify-between items-center w-full space-x-4 ml-4">
+
       <!-- Acessibilidade e Ajuste de Tamanho -->
-      <div class="flex flex-col items-center space-y-2">
-        <span class="text-white font-semibold">Acessibilidade</span>
+      <div class="flex flex-col items-center space-y-1">
+        <span class="text-white font-semibold text-sm">Acessibilidade</span>
         <div class="flex space-x-2">
           <button
             (click)="increaseFontSize()"
-            class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl"
+            class="bg-white w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
           >
-            <img src="/assets/+.svg" alt="" class="w-5 h-5" />
+            <img src="/assets/+.svg" alt="" class="w-4 h-4" />
           </button>
           <button
             (click)="decreaseFontSize()"
-            class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl"
+            class="bg-white  w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
           >
-            <img src="/assets/-.svg" alt="" class="w-5 h-5" />
+            <img src="/assets/-.svg" alt="" class="w-4 h-4" />
           </button>
           <button
             (click)="toggleContrast()"
-            class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl"
+            class="bg-white  w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
           >
-            <img src="/assets/contraste.svg" alt="Contraste" class="w-5 h-5" />
+            <img src="/assets/contraste.svg" alt="Contraste" class="w-4 h-4" />
           </button>
           <a
             routerLink="/sitemap"
-            class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl"
+            class="bg-white  w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
           >
-            <img src="/assets/sitemap.svg" alt="Grade" class="w-5 h-5" />
+            <img src="/assets/sitemap.svg" alt="Grade" class="w-4 h-4" />
           </a>
           <a
             routerLink="/acessibilidade"
-            class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-blue-dark text-xl"
+            class="bg-white  w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
           >
             <img
               src="/assets/acessibilidade.svg"
               alt="Acessibilidade"
-              class="w-5 h-5"
+              class="w-4 h-4"
             />
           </a>
         </div>
       </div>
 
-      <!-- Logotipos e Ícones -->
-      <div class="flex justify-between items-center w-full space-x-6 ml-8">
+
+
+
         <img
           src="../../../assets/leitor.svg"
           alt="Compatível com Leitores de Tela"
-          class="h-12"
+          class="h-10"
         />
         <img
           src="../../../assets/iguacu-digital.svg"
           alt="Carioca Digital"
-          class="h-12"
+          class="h-10"
         />
-        <img src="../../../assets/informação.svg" alt="1746" class="h-12" />
+        <img src="../../../assets/informação.svg" alt="1746" class="h-10" />
         <img
           src="../../../assets/lgpd.svg"
           alt="Acesso à Informação"
-          class="pb-5-2 h-12"
+          class="h-10"
         />
-
-        <a routerLink="/sei">sei</a>
   
-
-        <!-- Bloco de Redes Sociais com menos gap -->
-        <div class="flex items-center space-x-1 pl-4 border-l-2 border-white">
+        <a routerLink="/ouvidoria" class="text-white text-xs font-semibold">Ouvidoria</a>
+  
+        <!-- Bloco de Redes Sociais -->
+        <div class="flex items-center space-x-2 pl-4 border-l-2 border-white">
           <a
             target="_blank"
             href="https://www.facebook.com/prefeituradenovaiguacu"
@@ -95,7 +100,7 @@
             <img
               src="../../../assets/white-facebook-icon.svg"
               alt="Facebook"
-              class="h-8"
+              class="h-8 w-8"
             />
           </a>
           <a
@@ -105,20 +110,23 @@
             <img
               src="../../../assets/white-email-icon.svg"
               alt="Instagram"
-              class="h-8"
+              class="h-8 w-8"
             />
           </a>
           <a target="_blank" href="">
             <img
               src="../../../assets/white-instagram-icon.svg"
               alt="Email"
-              class="h-8"
+              class="h-8 w-8"
             />
           </a>
         </div>
       </div>
     </div>
   </div>
+  
+  
+  
 
   <div class="container mx-auto p-4 flex flex-row justify-between items-center">
     <!-- Logo -->
@@ -193,8 +201,12 @@
         >
         <form (ngSubmit)="onSearchSubmit()" class="flex items-center w-full">
           <div class="relative flex items-center w-full">
-            <img src="assets/lupa-icon.svg" alt="Ícone de busca" class="absolute left-0 w-10 h-10" />
+            <button type="submit">
+              <img src="assets/lupa-icon.svg" alt="Ícone de busca" class="absolute left-0 top-0 w-10 h-10" />
+            </button>
+
             <input
+            
               type="text"
               [(ngModel)]="searchQuery"
               name="search"
@@ -203,9 +215,7 @@
               (input)="onSearch($event)"
             />
           </div>
-          <button type="submit" class="text-white">
-            <img src="assets/lupa-icon.svg" alt="Ícone de busca" class="w-10 h-10" />
-          </button>
+
         </form>
         
         </div>
