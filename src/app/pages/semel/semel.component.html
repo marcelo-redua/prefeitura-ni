@@ -1,1 +1,67 @@
-<p>semel works!</p>
+<main>
+    <div class="container mx-auto p-4">
+      <app-highlight-text
+        [topText]="''"
+        [highlightText]="'SECRETARIAS'"
+        [image]="''"
+      ></app-highlight-text>
+      <app-secretary-header
+        [title]="'SEMEL'"
+        [subtitle]="'Secretaria Municipal de Esporte e Lazer'"
+        [imagePath]="'/assets/building.png'"
+      >
+      </app-secretary-header>
+      <app-highlight-text
+        [topText]="''"
+        [highlightText]="'acesso rápido'"
+        [image]="''"
+      ></app-highlight-text>
+      <app-secretary-quick-access></app-secretary-quick-access>
+      <app-highlight-text
+      [topText]="'últimas'"
+      [highlightText]="'notícias'"
+      [image]="''"
+      ></app-highlight-text>
+      <app-news-feed
+      [newsList]="[
+        {
+          title: 'Nova Iguaçu divulga lista dos sorteados para cursos gratuitos do CVTI',
+          date: '02 de fevereiro de 2024',
+          image: '/assets/cras.jpg',
+          link: '/noticia-1'
+        },
+        {
+          title: 'Prefeitura de Nova Iguaçu oferece sete cursos gratuitos para crianças, adolescentes e adultos',
+          date: '22 de janeiro de 2024',
+          image: '/assets/news-2.jpg',
+          link: '/noticia-2'
+        },
+        {
+          title: 'Nova Iguaçu oferece 450 vagas para cursos tecnológicos do CVTI',
+          date: '09 de fevereiro de 2024',
+          image: '/assets/news-3.jpg',
+          link: '/noticia-3'
+        },
+        {
+          title: 'Nova Iguaçu tem vagas para projetos para a Incubadora do Centro Vocacional de Tecnologia e Inovação',
+          date: '16 de novembro de 2022',
+          image: '/assets/news-4.jpg',
+          link: '/noticia-4'
+        },
+        {
+          title: 'Evento de Tecnologia e Informação do CVTI aborda o mundo digital em Nova Iguaçu',
+          date: '03 de novembro de 2022',
+          image: '/assets/news-5.jpg',
+          link: '/noticia-5'
+        },
+        {
+          title: '1° Evento de Tecnologia, Informação e Comunicação de Nova Iguaçu será nesta quinta-feira',
+          date: '01 de novembro de 2022',
+          image: '/assets/news-6.jpg',
+          link: '/noticia-6'
+        }
+      ]"
+    ></app-news-feed>
+    </div>
+  </main>
+  

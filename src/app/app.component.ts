@@ -1,29 +1,24 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, Renderer2 } from '@angular/core';
 import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
-import { HighlightTextComponent } from './components/highlight-text/highlight-text.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from "./components/footer/footer.component";
-import { HomeComponent } from "./pages/home/home.component";
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
-import { LatestNewsComponent } from './components/latest-news/latest-news.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
 import { LiveChatComponent } from "./components/live-chat/live-chat.component";
 import { TitleService } from './services/title.service';
 import { filter } from 'rxjs/operators';
+import { CookieConsentComponent } from './components/cookie-consent/cookie-consent.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    CookieConsentComponent,
     RouterOutlet, 
-    HighlightTextComponent, 
     FooterComponent, 
-    HomeComponent, 
     BreadcrumbComponent, 
-    LatestNewsComponent, 
     HeaderComponent, 
-    CarouselComponent, 
-    LiveChatComponent
+    LiveChatComponent,
+
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
