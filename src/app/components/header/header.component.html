@@ -23,54 +23,52 @@
     <div
       class="container mx-auto flex flex-row justify-between items-center h-full px-4"
     >
-
-  
       <!-- Logotipos e Ícones -->
       <div class="flex justify-between items-center w-full space-x-4 ml-4">
-
-      <!-- Acessibilidade e Ajuste de Tamanho -->
-      <div class="flex flex-col items-center space-y-1">
-        <span class="text-white font-semibold text-sm">Acessibilidade</span>
-        <div class="flex space-x-2">
-          <button
-            (click)="increaseFontSize()"
-            class="bg-white w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
-          >
-            <img src="/assets/+.svg" alt="" class="w-4 h-4" />
-          </button>
-          <button
-            (click)="decreaseFontSize()"
-            class="bg-white  w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
-          >
-            <img src="/assets/-.svg" alt="" class="w-4 h-4" />
-          </button>
-          <button
-            (click)="toggleContrast()"
-            class="bg-white  w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
-          >
-            <img src="/assets/contraste.svg" alt="Contraste" class="w-4 h-4" />
-          </button>
-          <a
-            routerLink="/sitemap"
-            class="bg-white  w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
-          >
-            <img src="/assets/sitemap.svg" alt="Grade" class="w-4 h-4" />
-          </a>
-          <a
-            routerLink="/acessibilidade"
-            class="bg-white  w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
-          >
-            <img
-              src="/assets/acessibilidade.svg"
-              alt="Acessibilidade"
-              class="w-4 h-4"
-            />
-          </a>
+        <!-- Acessibilidade e Ajuste de Tamanho -->
+        <div class="flex flex-col items-center space-y-1">
+          <span class="text-white font-semibold text-sm">Acessibilidade</span>
+          <div class="flex space-x-2">
+            <button
+              (click)="increaseFontSize()"
+              class="bg-white w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
+            >
+              <img src="/assets/+.svg" alt="" class="w-4 h-4" />
+            </button>
+            <button
+              (click)="decreaseFontSize()"
+              class="bg-white w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
+            >
+              <img src="/assets/-.svg" alt="" class="w-4 h-4" />
+            </button>
+            <button
+              (click)="toggleContrast()"
+              class="bg-white w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
+            >
+              <img
+                src="/assets/contraste.svg"
+                alt="Contraste"
+                class="w-4 h-4"
+              />
+            </button>
+            <a
+              routerLink="/sitemap"
+              class="bg-white w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
+            >
+              <img src="/assets/sitemap.svg" alt="Grade" class="w-4 h-4" />
+            </a>
+            <a
+              routerLink="/acessibilidade"
+              class="bg-white w-7 h-7 rounded-full flex items-center justify-center text-blue-dark"
+            >
+              <img
+                src="/assets/acessibilidade.svg"
+                alt="Acessibilidade"
+                class="w-4 h-4"
+              />
+            </a>
+          </div>
         </div>
-      </div>
-
-
-
 
         <img
           src="../../../assets/leitor.svg"
@@ -83,14 +81,16 @@
           class="h-10"
         />
         <img src="../../../assets/informação.svg" alt="1746" class="h-10" />
-        <img
-          src="../../../assets/lgpd.svg"
-          alt="Acesso à Informação"
-          class="h-10"
-        />
-  
-        <a routerLink="/ouvidoria" class="text-white text-xs font-semibold">Ouvidoria</a>
-  
+
+
+        <a routerLink="/ouvidoria" class="text-white text-xs font-semibold">
+          <img
+            src="../../../assets/ouvidoria-icon.svg"
+            alt="Ouvidoria"
+            class="h-10"
+          />
+        </a>
+
         <!-- Bloco de Redes Sociais -->
         <div class="flex items-center space-x-2 pl-4 border-l-2 border-white">
           <a
@@ -124,9 +124,6 @@
       </div>
     </div>
   </div>
-  
-  
-  
 
   <div class="container mx-auto p-4 flex flex-row justify-between items-center">
     <!-- Logo -->
@@ -199,25 +196,26 @@
         <div
           class="hidden lg:flex justify-between bg-white rounded-xl border border-gray px-2 py-3 my-3"
         >
-        <form (ngSubmit)="onSearchSubmit()" class="flex items-center w-full">
-          <div class="relative flex items-center w-full">
-            <button type="submit">
-              <img src="assets/lupa-icon.svg" alt="Ícone de busca" class="absolute left-0 top-0 w-10 h-10" />
-            </button>
+          <form (ngSubmit)="onSearchSubmit()" class="flex items-center w-full">
+            <div class="relative flex items-center w-full">
+              <button type="submit">
+                <img
+                  src="assets/lupa-icon.svg"
+                  alt="Ícone de busca"
+                  class="absolute left-0 top-0 w-10 h-10"
+                />
+              </button>
 
-            <input
-            
-              type="text"
-              [(ngModel)]="searchQuery"
-              name="search"
-              class="pl-12 pr-4 py-2 w-full border-0 rounded-lg focus:outline-none bg-gray-light placeholder-gray-dark text-dark-blue"
-              placeholder="Buscar..."
-              (input)="onSearch($event)"
-            />
-          </div>
-
-        </form>
-        
+              <input
+                type="text"
+                [(ngModel)]="searchQuery"
+                name="search"
+                class="pl-12 pr-4 py-2 w-full border-0 rounded-lg focus:outline-none bg-gray-light placeholder-gray-dark text-dark-blue"
+                placeholder="Buscar..."
+                (input)="onSearch($event)"
+              />
+            </div>
+          </form>
         </div>
       </nav>
     </nav>
