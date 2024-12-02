@@ -175,7 +175,7 @@ export const routes: Routes = [
   {
     path: 'telefones',
     component: TelefonesComponent,
-    data: { breadcrumb: 'Telefones e Endereços' },
+    data: { breadcrumb: 'Telefones Úteis' },
   },
   {
     path: 'sei',
