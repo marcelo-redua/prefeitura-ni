@@ -1,24 +1,24 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div *ngFor="let item of phoneItems" class="flex items-start p-4 border-b-2 border-gray">
-      <!-- Ícone -->
-      <div class="border-2 border-gray p-4 rounded-xl mr-4 flex-shrink-0">
-        <img [src]="item.iconSrc" [alt]="item.title" width="50" height="50" />
-      </div>
-  
-      <!-- Conteúdo -->
-      <div>
-        <h3 class="text-xl font-bold text-orange">{{ item.title }}</h3>
-        <div class="text-base text-blue-dark mt-2">
-          <p *ngFor="let phone of item.phones" class="mb-1">
-            <a 
-              [href]="generatePhoneHref(phone)" 
-              class="text-orange hover:underline"
-            >
-              {{ phone }}
-            </a>
-          </p>
-        </div>
-      </div>
+  <div *ngFor="let item of phoneItems" class="flex items-start p-4 border-b-2 border-gray">
+    <!-- Ícone -->
+    <div class="border-2 border-gray p-4 rounded-xl mr-4 flex-shrink-0">
+      <img [src]="item.iconSrc" [alt]="item.title" width="50" height="50" />
+    </div>
+
+    <!-- Conteúdo -->
+    <div>
+      <h3 class="text-xl font-bold text-orange">{{ item.title }}</h3>
+      <p class="text-sm text-gray-600 italic mb-2">{{ item.description }}</p>
+      <ul class="mt-2 space-y-2">
+        <li *ngFor="let phone of item.phones" class="flex items-center">
+          <!-- Ícone de checkbox -->
+          <img src="/assets/icons/check.svg" alt="checkbox" class="w-5 h-5 mr-2" />
+          <!-- Link para o telefone -->
+          <a [href]="generatePhoneHref(phone.number)" class="text-orange hover:underline">
+            <span class="font-bold underline text-blue-dark">{{ phone.label }}</span> {{ phone.number }}
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
-  
+</div>
