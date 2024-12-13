@@ -31,7 +31,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Administração e Tecnologia',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias e processos de gestão; Responder pela implantação e execução das políticas municipais nas áreas de Administração e Gestão de Pessoas no âmbito da Prefeitura;',
+        ' Promover a modernização administrativa através da introdução de novas tecnologias e processos de gestão;',
       secretaryImage: '../../../assets/img/paulo-semat.jpeg',
       secretaryName: 'Paulo Sérgio da Silva Monteiro',
       secretaryGender: 'Secretário',
@@ -41,7 +41,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Agricultura e Meio Ambiente',
       description:
-        'Elaborar, coordenar, executar e fiscalizar, direta ou indiretamente, a Política Ambiental do Município de Nova Iguaçu; Estabelecer as normas de proteção ambiental referente às atividades que interfiram ou que possam interferir na qualidade do meio ambiente;',
+        'Elaborar, coordenar, executar e fiscalizar, direta ou indiretamente, a Política Ambiental do Município de Nova Iguaçu;',
       secretaryImage: '../../../assets/img/edgar-semam.jpg',
       secretaryName: 'Edgar Martins',
       secretaryGender: 'Secretário',
