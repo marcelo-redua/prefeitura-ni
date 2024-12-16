@@ -31,7 +31,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Administração e Tecnologia',
       description:
-        ' Promover a modernização administrativa através da introdução de novas tecnologias e processos de gestão;',
+        'Promover a modernização administrativa através da introdução de novas tecnologias e processos de gestão;',
       secretaryImage: '../../../assets/img/paulo-semat.jpeg',
       secretaryName: 'Paulo Sérgio da Silva Monteiro',
       secretaryGender: 'Secretário',
@@ -61,7 +61,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Controle Geral',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias...',
+        'Analisar processos licitatórios, suas dispensas, inexigibilidades e demais afastamentos, chamamentos públicos, convênios e ajustes congêneres celebrados pelo Município, sob o aspecto formal e econômico, em atendimento às legislações existentes e às orientações, jurisprudências e deliberações dos Órgãos de Controle Externo;',
       secretaryImage: '../../../assets/img/rafael-semconger.jpg',
       secretaryName: 'Rafael Martins Gomes',
       secretaryGender: 'Secretário',
@@ -71,7 +71,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Cultura',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias',
+        'Planejamento, organização, promoção, produção, articulação, coordenação, integração, execução e avaliação das políticas municipais relativas às áreas da cultura;',
       secretaryImage: '../../../assets/img/marcus-semcult.jpeg',
       secretaryName: 'Marcus Monteiro',
       secretaryGender: 'Secretário',
@@ -81,7 +81,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Defesa Civil',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias...',
+        'Desenvolver cultura nacional de prevenção de desastres, destinada ao desenvolvimento da consciência nacional acerca dos riscos de desastre no País;',
       secretaryImage: '../../../assets/img/jorge-defesa-civil.jpeg',
       secretaryName: 'Jorge Ribeiro Lopes',
       secretaryGender: 'Secretário',
@@ -92,7 +92,7 @@ throw new Error('Method not implemented.');
       title:
         'Secretaria Municipal de Desenvolvimento Econômico, Trabalho e Turismo',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias...',
+        'A SEMDETTUR tem como missão melhorar o ambiente de negócios, tornando-o propício ao crescimento, à rentabilidade, ao fomento de novas tecnologias e à geração de novos empregos.',
       secretaryImage: '../../../assets/img/semfoto.png',
       secretaryName: 'Ana Paula Coelho Lopes',
       secretaryGender: 'Secretária',
@@ -102,7 +102,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Desenvolvimento Urbano',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias...',
+        'Dar suporte técnico em planejamento e projetos arquitetônicos e urbanísticos às metas do governo municipal;',
       secretaryImage: '../../../assets/img/jose-semdur.jpeg',
       secretaryName: 'José Reginaldo Bastos da Cruz',
       secretaryGender: 'Secretário',
@@ -112,7 +112,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Economia, Planejamento e Finanças',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias...',
+        'Executar as atividades relativas aos assuntos fiscais e financeiros do Município e integração com os demais entes; lançando, arrecadando e controlando os tributos e as receitas transferidas;',
       secretaryImage: '../../../assets/img/fabiano-semef.jpeg',
       secretaryName: 'Fabiano Muniz da Silva',
       secretaryGender: 'Secretário',
@@ -122,7 +122,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Educação',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias...',
+        'Efetivação de políticas que propiciem de forma democrática e inclusiva a todo individuo a gratuidade, o acesso e a permanência na Educação Básica;',
       secretaryImage: '../../../assets/img/maria-semed.jpg',
       secretaryName: 'Maria Virgínia Andrade Rocha',
       secretaryGender: 'Secretária',
@@ -132,7 +132,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Esporte e Lazer',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias...',
+        'Desenvolvimento e a implementação, no Município, de políticas públicas de esporte e lazer, com qualificação, inclusão das práticas e espaços de esporte e lazer, contribuindo para a melhoria da qualidade de vida;',
       secretaryImage: '../../../assets/img/leandro-semel.jpeg',
       secretaryName: 'Leandro Silva Wanderley',
       secretaryGender: 'Secretário',
@@ -142,7 +142,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Governo',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias...',
+        'prestar assessoramento ao Prefeito, nos assuntos de natureza política e administrativa de governo;',
       secretaryImage: '../../../assets/img/semfoto.png',
       secretaryName: 'Rodrigo Jorge da Costa Ferraz',
       secretaryGender: 'Secretário',
@@ -152,7 +152,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Infraestrutura',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias...',
+        'Dar suporte técnico e administrativo as metas de governo;',
       secretaryImage: '../../../assets/img/semfoto.png',
       secretaryName: 'Cleide Moreira',
       secretaryGender: 'Secretária',
@@ -162,7 +162,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Saúde',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias...',
+        'Gestão, formulação e coordenação da política de saúde do município de acordo os instrumentos legais que dispõem sobre o Sistema Únicos de Saúde – SUS;',
       secretaryImage: '../../../assets/img/luiz-semus.jpeg',
       secretaryName: 'Luiz Carlos Nobre Cavalcanti',
       secretaryGender: 'Secretário',
@@ -172,7 +172,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Segurança Pública',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias...',
+        'Assessorar diretamente o Prefeito no desempenho de suas atribuições, atuando como órgão central do sistema de segurança e defesa;',
       secretaryImage: '../../../assets/img/fernando-semseg.jpeg',
       secretaryName: 'Fernando Vieira Bastos',
       secretaryGender: 'Secretário',
@@ -182,7 +182,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Serviços Públicos',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias...',
+        'Dragagem de Rios, Nivelamento (Patroll), Desobstrução de esgoto (Vacall), Serviços cemiteriais, Limpeza Manual',
       secretaryImage: '../../../assets/img/alexandre-semserp.jpg',
       secretaryName: 'Alexandre Ferreira da Silveira',
       secretaryGender: 'Secretário',
@@ -192,7 +192,7 @@ throw new Error('Method not implemented.');
     {
       title: 'Secretaria Municipal de Transporte, Trânsito e Mobilidade Urbana',
       description:
-        'Promover a modernização administrativa através da introdução de novas tecnologias...',
+        'O planejamento, organização, articulação, coordenação e execução das políticas públicas municipais de transporte, trânsito e mobilidade urbana;',
       secretaryImage: '../../../assets/img/semfoto.png',
       secretaryName: 'Leonardo Bastos Callijão',
       secretaryGender: 'Secretário',
