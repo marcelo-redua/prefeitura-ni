@@ -1,21 +1,39 @@
 <!-- Header Mobile -->
-<header class="flex lg:hidden justify-between items-center p-4 text-blue-dark">
+<header class="flex lg:hidden justify-between items-center p-4 text-blue-dark relative">
   <div class="flex items-center">
     <img src="/assets/logo.svg" alt="Digital Dubai Logo" class="h-16" />
   </div>
 
   <div class="flex gap-2">
     <!-- Botão com ícone de lupa -->
-    <button class="text-white">
+    <button (click)="toggleSearch()" class="text-white">
       <img src="/assets/lupa-icon.svg" alt="Ícone de busca" class="w-10 h-10" />
     </button>
-
+    
     <!-- Botão com ícone de menu hamburger -->
-    <button class="text-white">
+    <button (click)="toggleMenu()" class="text-white">
       <img src="/assets/menu-icon.svg" alt="Ícone de menu" class="w-10 h-10" />
     </button>
   </div>
+
+  <!-- Barra de pesquisa oculta -->
+  <div [ngClass]="{'hidden': !isSearchVisible}" class="absolute top-16 left-0 w-full p-4 bg-white shadow-md">
+    <input type="text" placeholder="Buscar..." class="w-full p-2 border rounded-md" />
+  </div>
+
+  <!-- Menu dropdown oculto -->
+  <nav [ngClass]="{'hidden': !isMenuVisible}" class="absolute top-16 right-0 w-48 p-4 bg-white shadow-md">
+    <ul>
+      <li><a href="#" class="block p-2">Início</a></li>
+      <li><a href="/secretarias" class="block p-2">Secretarias</a></li>
+      <li><a href="https://www.doweb.novaiguacu.rj.gov.br/portal/diario-oficial" class="block p-2">Diário Oficial</a></li>
+      <li><a href="/noticias" class="block p-2">Notícias</a></li>
+      <li><a href="https://novaiguacu.rj.gov.br/portaldatransparencia/" class="block p-2">Transparência</a></li>
+      <li><a href="/ouvidoria" class="block p-2">Contato</a></li>
+    </ul>
+  </nav>
 </header>
+
 
 <!-- Header Desktop -->
 <header class="hidden lg:flex items-center flex-col">
@@ -86,6 +104,14 @@
         <a routerLink="/ouvidoria" class="text-white text-xs font-semibold">
           <img
             src="../../../assets/ouvidoria-icon.svg"
+            alt="Ouvidoria"
+            class="h-10"
+          />
+        </a>
+
+        <a routerLink="#" class="text-white text-xs font-semibold">
+          <img
+            src="../../../assets/lgpd.svg"
             alt="Ouvidoria"
             class="h-10"
           />

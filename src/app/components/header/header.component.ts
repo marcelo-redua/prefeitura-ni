@@ -22,6 +22,8 @@ export class HeaderComponent implements OnInit {
   searchResults: string[] = []; // Resultados da pesquisa
   private data: string[] = ['Início', 'Secretarias', 'Diário Oficial', 'Notícias', 'Transparência']; // Dados para exemplo de busca
   searchQuery: string = ''; // Armazena o termo de pesquisa
+  isSearchVisible = false;
+  isMenuVisible = false;
 
   constructor(private renderer: Renderer2, private router: Router) {}
 
@@ -81,5 +83,13 @@ export class HeaderComponent implements OnInit {
   onSearchSubmit() {
     // Redireciona para a página de resultados com a query
     this.router.navigate(['/resultados'], { queryParams: { query: this.searchQuery } });
+  }
+
+  toggleSearch() {
+    this.isSearchVisible = !this.isSearchVisible;
+  }
+
+  toggleMenu() {
+    this.isMenuVisible = !this.isMenuVisible;
   }
 }
